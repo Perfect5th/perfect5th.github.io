@@ -180,7 +180,18 @@
     list-style: none;
 
     > li {
+        background-color: #404D70;
+        border: 0px solid black;
+        border-radius: 20px;
+        float: left;
         margin-bottom: $spacing-unit;
+        margin-right: 40px;
+        padding: 5px 10px;
+
+        a:link, a:visited, a:hover {
+            color: #fdfdfd;
+            text-decoration: none;
+        }
     }
 }
 
@@ -192,6 +203,10 @@
 .post-link {
     display: block;
     font-size: 24px;
+}
+
+.rss-subscribe {
+  clear: both;
 }
 
 

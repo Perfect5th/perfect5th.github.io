@@ -180,7 +180,6 @@
     list-style: none;
 
     > li {
-        background-color: #404D70;
         border: 0px solid black;
         border-radius: 20px;
         float: left;
@@ -192,7 +191,29 @@
             color: #fdfdfd;
             text-decoration: none;
         }
+    
     }
+    
+    > li:nth-child(5n) {
+        background-color: #a52b34;
+    }
+    
+    > li:nth-child(5n+1) {
+        background-color: #e68039;
+    }
+
+    > li:nth-child(5n+2) {
+        background-color: #8c979b;
+    }
+
+    > li:nth-child(5n+3) {
+        background-color: #00697c;
+    }
+
+    > li:nth-child(5n+4) {
+        background-color: #71983d;
+    }
+    
 }
 
 .post-meta {

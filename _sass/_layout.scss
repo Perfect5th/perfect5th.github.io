@@ -98,8 +98,10 @@
  * Site footer
  */
 .site-footer {
+    background-color: inherit;
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    z-index: 0;
 }
 
 .footer-heading {
@@ -179,41 +181,45 @@
     margin-left: 0;
     list-style: none;
 
-    > li {
+    > .post-item {
         border: 0px solid black;
         border-radius: 20px;
         float: left;
         margin-bottom: $spacing-unit;
         margin-right: 40px;
+        opacity: 0;
         padding: 5px 10px;
+        position: relative;
+        top: 10em;
+        z-index: -1;
 
         a:link, a:visited, a:hover {
             color: #fdfdfd;
             text-decoration: none;
         }
-    
+
     }
-    
-    > li:nth-child(5n) {
+
+    > .post-item:nth-child(5n) {
         background-color: #a52b34;
     }
-    
-    > li:nth-child(5n+1) {
+
+    .post-item:nth-child(5n+1) {
         background-color: #e68039;
     }
 
-    > li:nth-child(5n+2) {
+    .post-item:nth-child(5n+2) {
         background-color: #8c979b;
     }
 
-    > li:nth-child(5n+3) {
+    .post-item:nth-child(5n+3) {
         background-color: #00697c;
     }
 
-    > li:nth-child(5n+4) {
+    .post-item:nth-child(5n+4) {
         background-color: #71983d;
     }
-    
+
 }
 
 .post-meta {

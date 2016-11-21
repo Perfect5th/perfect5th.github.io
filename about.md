@@ -13,3 +13,5 @@ You can find me (sometimes) on twitter at:
 
 My github is:
 {% include icon-github.html username=site.github_username %}
+
+And my resume is right [here](/static/MitchellBurtonResume.pdf).

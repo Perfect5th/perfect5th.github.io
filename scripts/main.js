@@ -9,7 +9,12 @@ $(document).ready(function() {
     $(this).parent().css('overflow', 'hidden');
   });
 
-  /* $('.post-list > li > h2').click(() => {
-    // $('.post-list > li').width(200);
-  }); */
+  $('.post-item').click(function () {
+    var parent_width = $(this).parent().css('width');
+    var this_padding = $(this).css('padding-right')
+    $(this).animate({
+      width: parent_width,
+    });
+    alert(this_padding)
+  });
 });

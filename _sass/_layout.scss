@@ -191,11 +191,16 @@
         position: relative;
         top: 10em;
         z-index: -1;
-
-        a:link, a:visited, a:hover {
-            color: #fdfdfd;
-            text-decoration: none;
+        
+        h2 {
+          font-size: 1em;
         }
+
+        }
+        
+    a:link, a:visited, a:hover {
+        color: #fdfdfd;
+        text-decoration: none;
 
     }
 

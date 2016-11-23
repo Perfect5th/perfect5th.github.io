@@ -8,13 +8,15 @@ layout: default
 
   <div class="post-list">
     {% for post in site.posts %}
-      <div class="post-item">
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <a class="post-item post-link" href="#">
+        <div class="post-title-card">
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </div>
+          <h2>
+            {{ post.title }}
+          </h2>
+        </div>
+      </a>
     {% endfor %}
     <div class="rss-subscribe">
       <p>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

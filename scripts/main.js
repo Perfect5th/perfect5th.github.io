@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.post-item').animate({
+  $('.post-box').animate({
     opacity: 1,
     top: 0,
   }, 'slow', 'swing', function () {
@@ -9,12 +9,10 @@ $(document).ready(function() {
     $(this).parent().css('overflow', 'hidden');
   });
 
-  $('.post-item').click(function () {
-    var parent_width = $(this).parent().css('width');
-    var this_padding = $(this).css('padding-right')
+  $('.post-box').click(function () {
     $(this).animate({
-      width: parent_width,
+      width: '97%',
     });
-    alert(this_padding)
+    $.get()
   });
 });

@@ -10,7 +10,7 @@ $(document).ready(function() {
     $(this).parent().css('overflow', 'hidden');
   });
 
-  $('.closed-post-box').click(function () {
+  function openPost() {
     var $curr_post = $(this);
     $(this).animate({
       width: '95%',
@@ -19,15 +19,26 @@ $(document).ready(function() {
       $.get($curr_post.children('.post-url').attr('id'), function (data) {
         $curr_post.append('<div class="post-content-inline" hidden>' + data + '</div>');
         $('.post-content-inline').slideDown(function () {
-          $curr_post.off()
+          $curr_post.off();
         });
       });
     });
-  });
+  }
+
+  $('.closed-post-box').on('click', openPost);
 
   $('.close-post-box').click(function () {
-    var $curr_post = $(this);
-    alert('CLOSE THAT BOX');
+    var $curr_post = $(this).parent();
+    var init_width = $curr_post.find('.post-item-title').width();
+    $(this).hide();
+    $curr_post.children('.post-content-inline').slideUp(function () {
+      $(this).remove();
+      $curr_post.animate({
+        width: init_width,
+      }, function () {
+        $curr_post.on('click', openPost);
+      });
+    });
   });
 
 });

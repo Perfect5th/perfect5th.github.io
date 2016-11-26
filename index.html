@@ -8,8 +8,10 @@ layout: default
 
   <div class="post-list">
     {% for post in site.posts %}
-      <div class="post-box">
-        <a class="post-item post-link" href="#">
+      <div class="post-box closed-post-box">
+        <span class="post-url" id="{{ post.url | prepend: site.baseurl }}"></span>
+        <div class="close-post-box post-meta" hidden>Close</div>
+        <a class="post-item post-link">
           <div class="post-title-card">
             <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 

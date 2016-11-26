@@ -180,9 +180,15 @@
 .post-list {
     margin-left: 0;
 
+    .close-post-box {
+      float: right;
+      height: 100%;
+    }
+
     .post-box {
         border: 0px solid black;
         border-radius: 20px;
+        cursor: pointer;
         float: left;
         margin-bottom: $spacing-unit;
         margin-right: 40px;
@@ -196,11 +202,10 @@
           font-size: 1em;
         }
 
+        a, a:link, a:visited, a:hover {
+            color: #fdfdfd;
+            text-decoration: none;
         }
-
-    a:link, a:visited, a:hover {
-        color: #fdfdfd;
-        text-decoration: none;
 
     }
 

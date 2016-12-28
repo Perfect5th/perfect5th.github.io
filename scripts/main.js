@@ -13,7 +13,7 @@ $(document).ready(function() {
   function openPost() {
     var $curr_post = $(this);
     $(this).animate({
-      width: '95%',
+      width: '92%',
     }, function () {
       $curr_post.find('.close-post-box').show();
       $.get($curr_post.children('.post-url').attr('id'), function (data) {

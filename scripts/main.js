@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
   $('.post-box').animate({
     opacity: 1,
@@ -40,5 +40,34 @@ $(document).ready(function() {
       });
     });
   });
+  
+  function openHighlight() {
+      var $current = $(this);
+      $current.animate({
+          width: $current.parent().width(),
+      }, function() {
+          $current.children('.highlight-content').slideDown();
+      });
+      $current.addClass('opened-highlight');
+      $current.removeClass('closed-highlight');
+      $current.off();
+      $current.on('click', closeHighlight);
+  }
+  
+  function closeHighlight() {
+      var $current = $(this);
+      var init_width = $current.parent().width() / 4;
+      $current.children('.highlight-content').slideUp(400, function() {
+          $current.animate({
+              width: init_width
+          });
+      });
+      $current.removeClass('opened-highlight');
+      $current.addClass('closed-highlight');
+      $current.off();
+      $current.on('click', openHighlight);
+  }
+  
+  $('.closed-highlight').on('click', openHighlight);
 
 });

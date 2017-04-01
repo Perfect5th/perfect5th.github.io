@@ -1,0 +1,34 @@
+---
+title: Blog
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <div class="post-list">
+    {% for post in site.posts %}
+      <div class="post-box closed-post-box">
+        <span class="post-url" id="{{ post.url | prepend: site.baseurl }}"></span>
+        <div class="close-post-box post-meta" hidden>Close</div>
+        <a class="post-item post-link">
+          <div class="post-title-card">
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+            <h2>
+            <span class="post-item-title">
+              {{ post.title }}
+            </span>
+            </h2>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+    <div class="rss-subscribe">
+      <p>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    </div>
+  </div>
+
+
+</div>

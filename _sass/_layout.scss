@@ -169,6 +169,48 @@
 /**
  * Page content
  */
+.highlight-boxes {
+    display: flex;
+    display: -webkit-flex;
+    //justify-content: space-between;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    
+    > div {
+        margin: 1em;
+        border: 0px solid black;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-bottom: $spacing-unit;
+        padding: 5px 10px;
+        min-width: 26%;
+        
+        > h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #FDFDFD;
+            margin: auto;
+        }
+        
+        > p {
+            display: none;
+        }
+    }
+    
+    #web-design {
+        background-color: #cf454f;
+    }
+    
+    #web-applications {
+        background-color: #e68039;
+    }
+    
+    #data-analysis {
+        background-color: #3691a2;
+    }
+}
+
 .page-content {
     padding: $spacing-unit 0;
 }

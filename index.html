@@ -4,30 +4,28 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">What I do</h1>
 
-  <div class="post-list">
-    {% for post in site.posts %}
-      <div class="post-box closed-post-box">
-        <span class="post-url" id="{{ post.url | prepend: site.baseurl }}"></span>
-        <div class="close-post-box post-meta" hidden>Close</div>
-        <a class="post-item post-link">
-          <div class="post-title-card">
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-            <h2>
-            <span class="post-item-title">
-              {{ post.title }}
-            </span>
-            </h2>
-          </div>
-        </a>
+  <main>
+    <section class="highlights">
+      <div class="highlight-boxes">
+        <div class="highlight closed-highlight" id="web-design">
+          <h2 class="highlight-title">Web Design</h2>
+          <p class="highlight-content">Here is some further description of what 
+            I am talking about</p>
+        </div>
+        <div class="highlight closed-highlight" id="web-applications">
+          <h2 class="highlight-title">Web Apps</h2>
+          <p class="highlight-content">Here is some further description of what 
+            I am talking about</p>
+        </div>
+        <div class="highlight closed-highlight" id="data-analysis">
+          <h2 class="highlight-title">Data Analysis</h2>
+          <p class="highlight-content">Here is some further description of what 
+            I am talking about</p>
+        </div>
       </div>
-    {% endfor %}
-    <div class="rss-subscribe">
-      <p>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-    </div>
-  </div>
-
+    </section>
+  </main>
 
 </div>

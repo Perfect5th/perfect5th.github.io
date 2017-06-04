@@ -12,12 +12,9 @@ $(function() {
 
   function openPost() {
     var $curr_post = $(this);
-    $(this).animate({
-      width: '92%',
-    }, function () {
+    $curr_post.animate({ width: '92%' }, function () {
       $curr_post.find('.close-post-box').show();
-      $.get($curr_post.children('.post-url').attr('id'), function (data) {
-        $curr_post.append('<div class="post-content-inline" hidden>' + data + '</div>');
+      $curr_post.find('.post-content-inline').load($curr_post.children('.post-url').attr('id') + ' .post-content', function () {
         $('.post-content-inline').slideDown(function () {
           $curr_post.off();
         });
@@ -40,7 +37,7 @@ $(function() {
       });
     });
   });
-  
+
   function openHighlight() {
       var $current = $(this);
       $current.animate({
@@ -53,7 +50,7 @@ $(function() {
       $current.off();
       $current.on('click', closeHighlight);
   }
-  
+
   function closeHighlight() {
       var $current = $(this);
       var init_width = $current.parent().width() / 4;
@@ -67,7 +64,7 @@ $(function() {
       $current.off();
       $current.on('click', openHighlight);
   }
-  
+
   $('.closed-highlight').on('click', openHighlight);
 
 });

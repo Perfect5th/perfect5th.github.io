@@ -1,5 +1,7 @@
 $(function() {
 
+  // blog js
+
   $('.post-box').animate({
     opacity: 1,
     top: 0,
@@ -38,10 +40,13 @@ $(function() {
     });
   });
 
+
+  // index js
+
   function openHighlight() {
       var $current = $(this);
       $current.animate({
-          width: $current.parent().width(),
+          width: $current.parent().width() * 0.9,
       }, function() {
           $current.children('.highlight-content').slideDown();
       });
@@ -53,7 +58,7 @@ $(function() {
 
   function closeHighlight() {
       var $current = $(this);
-      var init_width = $current.parent().width() / 4;
+      var init_width = "10em";
       $current.children('.highlight-content').slideUp(400, function() {
           $current.animate({
               width: init_width

@@ -172,42 +172,42 @@
 .highlight-boxes {
     display: flex;
     display: -webkit-flex;
-    //justify-content: space-between;
+    justify-content: space-between;
+    flex-direction: column;
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    
+
     > div {
         margin: 1em;
         border: 0px solid black;
         border-radius: 20px;
         cursor: pointer;
-        margin-bottom: $spacing-unit;
+        width: 10em;
         padding: 5px 10px;
-        min-width: 26%;
         color: #FDFDFD;
-        
+
         > h2 {
             text-align: center;
             font-size: 24px;
             margin: auto;
         }
-        
+
         > p {
             display: none;
             margin-top: 1em;
             margin-bottom: 0.25em;
         }
     }
-    
+
     #web-design {
         background-color: #cf454f;
     }
-    
+
     #web-applications {
         background-color: #e68039;
     }
-    
+
     #data-analysis {
         background-color: #3691a2;
     }
@@ -333,5 +333,16 @@
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+}
+
+@media (max-width:670px) {
+    .highlight-boxes {
+        flex-direction: column;
+    }
+
+    .highlight-boxes > div {
+      align-self: center;
+      margin: 0 0 $spacing-unit 0;
     }
 }

@@ -24,7 +24,16 @@ main {
     margin: auto;
     padding: 1em;
     width: 80%;
-    height: 100%;
+    min-height: 100vh;
+}
+
+article {
+    padding: 0 1em;
+}
+
+article p {
+    line-height: 1.4;
+    padding: 0 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,5 +42,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+    border-bottom: 1px solid #4F964F;
+    line-height: 2em;
+    margin-top: 0;
     text-align: center;
+}
+
+code {
+    font-size: 0.8em;
 }

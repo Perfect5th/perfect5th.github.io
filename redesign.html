@@ -9,49 +9,64 @@
   <body>
 
     <main>
-      <h1>mitchellburton.ca redesign</h1>
+      <header>
+        <h1>mitchellburton.ca redesign</h1>
+      </header>
 
-      <h2>Palette</h2>
-      <table style="padding: 0.5em;">
-        <thead>
-          <th>RGB Hex</th>
-          <th>Colour</th>
-          <th>Use</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>#DEFFDE</td>
-            <td style="background-color: #DEFFDE; border: 1px solid black"></td>
-            <td>Background</td>
-          </tr>
-          <tr>
-            <td>#89AE89</td>
-            <td style="background-color: #89AE89; border: 1px solid black"></td>
-            <td>Background 2</td>
-          </tr>
-          <tr>
-            <td>#003F00</td>
-            <td style="background-color: #003F00; border: 1px solid black"></td>
-            <td>Body Text</td>
-          </tr>
-          <tr>
-            <td>#4F964F</td>
-            <td style="background-color: #4F964F; border: 1px solid black"></td>
-            <td>Header Text</td>
-          </tr>
-          <tr>
-            <td>#5EDE5E</td>
-            <td style="background-color: #5EDE5E; border: 1px solid black"></td>
-            <td>Highlights</td>
-          </tr>
-        </tbody>
-      </table>
+      <article>
+        <h2>Palette</h2>
+        <table style="padding: 0.5em;">
+          <thead>
+            <th>RGB Hex</th>
+            <th>Colour</th>
+            <th>Use</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#DEFFDE</td>
+              <td style="background-color: #DEFFDE; border: 1px solid black"></td>
+              <td>Background</td>
+            </tr>
+            <tr>
+              <td>#89AE89</td>
+              <td style="background-color: #89AE89; border: 1px solid black"></td>
+              <td>Background 2</td>
+            </tr>
+            <tr>
+              <td>#003F00</td>
+              <td style="background-color: #003F00; border: 1px solid black"></td>
+              <td>Body Text</td>
+            </tr>
+            <tr>
+              <td>#4F964F</td>
+              <td style="background-color: #4F964F; border: 1px solid black"></td>
+              <td>Header Text</td>
+            </tr>
+            <tr>
+              <td>#5EDE5E</td>
+              <td style="background-color: #5EDE5E; border: 1px solid black"></td>
+              <td>Highlights</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
 
-      <h2>Typefaces</h2>
-      <p>
-        Header text is Lato with fallback to sans-serif, body text is Zilla Slab
-        with fallback to serif.
-      </p>
+      <article>
+        <h2>Typography</h2>
+        <h3>Typefaces and Styles</h3>
+        <p>
+          Header text is Lato with fallback to sans-serif, body text is Zilla Slab
+          Medium (font-weight: 500) with fallback to serif.
+        </p>
+        <h3>Layout</h3>
+        <p>
+          Semantically-speaking, there should only be a single <code>&lt;h1&gt;</code>
+          element per page. The rest of the page is divided into <code>&lt;article&gt;</code>
+          elements, each headed with an <code>&lt;h2&gt;</code>.
+        </p>
+        <p>Line height for body paragraphs is 1.4.</p>
+      </article>
+
     </main>
 
   </body>

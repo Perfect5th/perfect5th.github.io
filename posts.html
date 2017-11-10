@@ -3,33 +3,36 @@ title: Blog
 layout: default
 ---
 
-<div class="home">
+<aside>
+  <nav>
+    <ul>
+      <a href="/"><li>Home</li></a>
+      <a href="/posts"><li class="active">Blog</li></a>
+      <a href="/pomo"><li>Pomo</li></a>
+    </ul>
+  </nav>
+</aside>
 
-  <h1 class="page-heading">Posts</h1>
+<article class="blog-topper">
+  <h2>Read My Rambles</h2>
+  <p>
+    Here you can find me talking into the void &ndash; much like my Twitter, but
+    with even less reach.
+  </p>
+  <p>
+    If you&rsquo;re interested in reaching out to me, email me! I may one day
+    add comments to this blog.
+  </p>
+</article>
 
-  <div class="post-list">
-    {% for post in site.posts %}
-      <div class="post-box closed-post-box">
-        <span class="post-url" id="{{ post.url | prepend: site.baseurl }}"></span>
-        <div class="close-post-box post-meta" hidden>Close</div>
-        <a class="post-item post-link">
-          <div class="post-title-card">
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-            <h2>
-            <span class="post-item-title">
-              {{ post.title }}
-            </span>
-            </h2>
-          </div>
-        </a>
-        <div class="post-content-inline" hidden></div>
+{% for post in site.posts %}
+  <article class="blog-list-item">
+    <a href="{{ post.url }}" class="blog-link">
+      <div>
+        <h2>{{ post.title }}</h2>
+        <p class="blog-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+        {{ post.content | truncatewords: 40 }} <span class="click-more">Click for more</span>
       </div>
-    {% endfor %}
-    <div class="rss-subscribe">
-      <p>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-    </div>
-  </div>
-
-
-</div>
+    </a>
+  </article>
+{% endfor %}

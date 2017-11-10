@@ -21,18 +21,31 @@ html {
 
 main {
     background-color: #DEFFDE;
+    border-radius: 1rem;
     margin: auto;
     padding: 1em;
     width: 80%;
     min-height: 100vh;
 }
 
-article {
-    padding: 0 1em;
+header, footer {
+    min-height: 4rem
 }
 
-article p {
-    line-height: 1.4;
+header {
+    border-bottom: 3px solid #4F964F;
+    border-radius: 1rem;
+    box-shadow: 0 0.1rem #89AE89;
+}
+
+footer {
+    border-top: 3px solid #4F964F;
+    border-radius: 1rem;
+    box-shadow: 0 -0.1rem #89AE89;
+    margin-top: 2rem;
+}
+
+article {
     padding: 0 1em;
 }
 
@@ -42,12 +55,80 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    border-bottom: 1px solid #4F964F;
     line-height: 2em;
-    margin-top: 0;
+    margin: 0 0 0.5rem 0;
     text-align: center;
+}
+
+table {
+    border: 2px solid #4F964F;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem 1rem 0.5rem;
+}
+
+th {
+    padding-bottom: 0.5rem;
+}
+
+td {
+    padding: 0 1rem;
+}
+
+p {
+    line-height: 1.4;
+    padding: 0 1em;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: #5EDE5E;
+}
+
+a.external {
+    font-weight: 600;
 }
 
 code {
     font-size: 0.8em;
+}
+
+
+/* Nav selectors */
+
+aside {
+    background-color: #89AE89;
+    border: 3px solid #4F964F;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 0.2rem black;
+    color: #DEFFDE;
+    float: right;
+    font-family: 'Lato', sans-serif;
+    margin: 1rem 0 1rem 1rem;
+    min-width: 20%;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0 1rem;
+}
+
+aside li {
+    background-color: #003F00;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    margin-left: 2rem;
+    padding: 0.5rem;
+    transition: margin-left 1s;
+}
+
+aside li.active {
+    margin-left: 0.5rem;
+}
+
+aside li:hover {
+    margin-left: 0.5rem;
 }

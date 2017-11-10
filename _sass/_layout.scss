@@ -1,26 +1,17 @@
 /* Redesign CSS 2017-11-08 Mitchell Burton */
 
-/* Base colours:
-Background: #DEFFDE
-Background 2: #89AE89
-Body Text: #003F00
-Header Text: #4F964F
-Highlights: #5EDE5E
-
-These are subject to change roles */
-
 /* Base selectors */
 
 html {
-    background-color: #89AE89;
-    color: #003F00;
+    background-color: $background2;
+    color: $bodytext;
     font-size: 18px;
     font-family: 'Zilla Slab', serif;
     font-weight: 500;
 }
 
 main {
-    background-color: #DEFFDE;
+    background-color: $background;
     border-radius: 1rem;
     margin: auto;
     padding: 1em;
@@ -33,15 +24,15 @@ header, footer {
 }
 
 header {
-    border-bottom: 3px solid #4F964F;
+    border-bottom: 3px solid $headertext;
     border-radius: 1rem;
-    box-shadow: 0 0.1rem #89AE89;
+    box-shadow: 0 0.1rem $background2;
 }
 
 footer {
-    border-top: 3px solid #4F964F;
+    border-top: 3px solid $headertext;
     border-radius: 1rem;
-    box-shadow: 0 -0.1rem #89AE89;
+    box-shadow: 0 -0.1rem $background2;
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
@@ -59,7 +50,7 @@ article {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #4F964F;
+    color: $headertext;
     font-family: 'Lato', sans-serif;
 }
 
@@ -78,7 +69,7 @@ h3 {
 }
 
 table {
-    border: 2px solid #4F964F;
+    border: 2px solid $headertext;
     border-radius: 0.5rem;
     padding: 0.5rem 0.5rem 1rem 0.5rem;
 }
@@ -101,7 +92,7 @@ a {
 }
 
 a:hover {
-    color: #5EDE5E;
+    color: $highlights;
 }
 
 a.external, dt {
@@ -125,11 +116,11 @@ dd {
 /* Nav selectors */
 
 aside {
-    background-color: #89AE89;
-    border: 3px solid #4F964F;
+    background-color: $background2;
+    border: 3px solid $headertext;
     border-radius: 1rem;
     box-shadow: inset 0 0 0.2rem black;
-    color: #DEFFDE;
+    color: $background;
     float: right;
     font-family: 'Lato', sans-serif;
     margin: 1rem 0 1rem 1rem;
@@ -141,7 +132,7 @@ aside {
     }
 
     li {
-        background-color: #003F00;
+        background-color: $bodytext;
         border-radius: 0.5rem;
         cursor: pointer;
         margin: 0.5rem;
@@ -164,10 +155,11 @@ aside {
     }
 }
 
+
 /* Blog index */
 
 .blog-topper {
-    border-bottom: 2px solid #4F964F;
+    border-bottom: 2px solid $headertext;
     margin-bottom: 1rem;
     max-width: 75%;
     min-height: 8.3rem;
@@ -188,7 +180,7 @@ aside {
     }
 
     h2.hovered {
-        color: #DEFFDE;
+        color: $background;
     }
 
     p.blog-date {
@@ -210,6 +202,26 @@ aside {
 }
 
 .blog-list-item:hover {
-    background-color: #89AE89;
+    background-color: $background2;
     box-shadow: inset 0 0 0.4rem black;
+}
+
+
+/* Blog items */
+
+.post {
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    p.blog-date {
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .post-content {
+        margin-top: 2rem;
+    }
+
 }

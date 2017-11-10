@@ -31,7 +31,9 @@ layout: default
       <div>
         <h2>{{ post.title }}</h2>
         <p class="blog-date">{{ post.date | date: "%b %-d, %Y" }}</p>
-        {{ post.content | truncatewords: 40 }} <span class="click-more">Click for more</span>
+        <div class="preview">
+          {{ post.content | truncatewords: 40 }} <span class="click-more">Click for more</span>
+        </div>
       </div>
     </article>
   </a>

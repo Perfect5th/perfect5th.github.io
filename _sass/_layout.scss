@@ -165,18 +165,26 @@ aside {
     min-height: 8.3rem;
 }
 
+.blog-link {
+    text-decoration: none;
+}
+
+.blog-link:hover {
+    color: inherit;
+}
+
 .blog-list-item {
     border-radius: 1rem;
     transition-property: background-color, box-shadow;
     transition-duration: 1s;
+    margin-bottom: 1rem;
     padding: 1rem;
-    padding-top: 0.1rem;
+    padding-top: 1rem;
 
     h2 {
         transition-property: color;
         transition-duration: 1s;
-        margin-bottom: 0;
-        margin-top: 1rem;
+        margin: 0;
     }
 
     h2.hovered {
@@ -186,14 +194,6 @@ aside {
     p.blog-date {
         margin-top: 0;
         padding: 0;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: inherit;
     }
 
     .click-more {

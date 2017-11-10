@@ -26,13 +26,13 @@ layout: default
 </article>
 
 {% for post in site.posts %}
-  <article class="blog-list-item">
-    <a href="{{ post.url }}" class="blog-link">
+  <a href="{{ post.url }}" class="blog-link">
+    <article class="blog-list-item">
       <div>
         <h2>{{ post.title }}</h2>
         <p class="blog-date">{{ post.date | date: "%b %-d, %Y" }}</p>
         {{ post.content | truncatewords: 40 }} <span class="click-more">Click for more</span>
       </div>
-    </a>
-  </article>
+    </article>
+  </a>
 {% endfor %}

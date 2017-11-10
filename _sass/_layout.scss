@@ -115,6 +115,10 @@ dd {
 
 /* Nav selectors */
 
+.subnav {
+    display: none;
+}
+
 aside {
     background-color: $background2;
     border: 3px solid $headertext;
@@ -124,7 +128,8 @@ aside {
     float: right;
     font-family: 'Lato', sans-serif;
     margin: 1rem 0 1rem 1rem;
-    min-width: 20%;
+    min-width: 150px;
+    width: 20%;
 
     ul {
         list-style: none;
@@ -201,10 +206,6 @@ aside {
             margin: 0;
         }
     }
-
-    .click-more {
-        text-decoration: underline;
-    }
 }
 
 .blog-list-item:hover {
@@ -228,6 +229,113 @@ aside {
 
     .post-content {
         margin-top: 2rem;
+    }
+
+}
+
+/* Media selectors */
+@media (max-width: 600px) {
+
+    /* Base Selectors */
+
+    html {
+        font-size: 14px;
+    }
+
+    main {
+        width: auto;
+    }
+
+    h1 {
+        line-height: 1.2;
+    }
+
+    article {
+        padding: 0;
+    }
+
+    h2 {
+        margin: 1.3rem 0 1rem 0;
+        padding-left: 1rem;
+    }
+
+    p, dl {
+        font-size: 1.2rem;
+    }
+
+    footer {
+
+        .footer-right {
+            display: none;
+        }
+
+    }
+
+    /* Nav Selectors */
+
+    aside {
+        display: none;
+    }
+
+    .subnav {
+        display: block;
+        font-family: 'Lato', sans-serif;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: $background2;
+            border-radius: 0.5rem;
+            color: $background;
+            margin: 0 0.5rem;
+            padding: 0.5rem;
+            text-align: center;
+            transition-property: background-color;
+            transition-duration: 1s;
+        }
+
+        li.active {
+            background-color: $bodytext;
+        }
+
+        li:hover {
+            background-color: $bodytext;
+        }
+
+        a {
+            flex-grow: 1;
+            text-decoration: none;
+        }
+
+    }
+
+    /* Blog Index */
+
+    .blog-topper {
+        max-width: none;
+    }
+
+    .blog-list-item {
+
+        h2 {
+            padding-left: 0;
+        }
+
+    }
+
+    /* Blog Items */
+
+    .post {
+
+        p.blog-date {
+            padding-left: 1rem;
+        }
+
     }
 
 }

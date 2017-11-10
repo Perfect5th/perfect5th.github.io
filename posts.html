@@ -3,6 +3,14 @@ title: Blog
 layout: default
 ---
 
+<nav class="subnav">
+  <ul>
+    <a href="/"><li>Home</li></a>
+    <a href="/posts"><li class="active">Blog</li></a>
+    <a href="/pomo"><li>Pomo</li></a>
+  </ul>
+</nav>
+
 <aside>
   <nav>
     <ul>
@@ -32,7 +40,7 @@ layout: default
         <h2>{{ post.title }}</h2>
         <p class="blog-date">{{ post.date | date: "%b %-d, %Y" }}</p>
         <div class="preview">
-          {{ post.content | truncatewords: 40 }} <span class="click-more">Click for more</span>
+          {{ post.content | truncatewords: 40 }} <a href="{{ post.url }}">Click for more</a>
         </div>
       </div>
     </article>

@@ -42,6 +42,8 @@ footer {
     .footer-right {
         display: flex;
         flex-direction: column-reverse;
+        margin-left: 2rem;
+        text-align: right;
     }
 }
 

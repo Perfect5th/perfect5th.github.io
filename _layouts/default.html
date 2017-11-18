@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html id="root" class="vert">
 
   {% include head.html %}
 
   <body>
+
+    <aside class="scheme-picker">
+      <div class="colour-choice active" data-colour="vert"></div>
+      <div class="colour-choice" data-colour="rouge"></div>
+      <div class="colour-choice" data-colour="bleu"></div>
+      <div class="colour-choice" data-colour="orange"></div>
+    </aside>
 
     <main>
       {% include header.html %}
@@ -12,6 +19,7 @@
 
       {% include footer.html %}
     </main>
+
 
   </body>
 

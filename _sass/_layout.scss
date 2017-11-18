@@ -3,11 +3,77 @@
 /* Base selectors */
 
 html {
-    background-color: $background2;
     color: $bodytext;
     font-size: 18px;
     font-family: 'Zilla Slab', serif;
     font-weight: 500;
+}
+
+html.vert {
+    background-color: $background2;
+}
+
+html.rouge {
+    background-color: $background2-red;
+    color: $bodytext-red;
+
+    main {
+        background-color: $background-red;
+    }
+
+    header {
+        border-color: $headertext-red;
+        box-shadow: 0 0.1rem $background2-red;
+    }
+
+    footer {
+        border-color: $headertext-red;
+        box-shadow: 0 -0.1rem $background2-red;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $headertext-red;
+    }
+
+    table {
+        border-color: $headertext-red;
+    }
+
+    a:hover {
+        color: $highlights-red;
+    }
+
+    aside.sidenav {
+        background-color: $background2-red;
+        border-color: $headertext-red;
+        color: $background-red;
+
+        li {
+            background-color: $bodytext-red;
+        }
+    }
+
+    .blog-topper {
+        border-color: $headertext-red;
+    }
+
+    .blog-list-item {
+        h2.hovered {
+            color: $background-red;
+        }
+    }
+
+    .blog-list-item:hover {
+        background-color: $background2-red;
+    }
+}
+
+html.bleu {
+    background-color: $headertext-blue;
+}
+
+html.orange {
+    background-color: $headertext-orange;
 }
 
 main {
@@ -115,13 +181,51 @@ dd {
     margin-bottom: 0.75rem;
 }
 
+/* Colour Scheme Picker */
+
+aside.scheme-picker {
+    float: right;
+    margin-right: 5.85rem;
+    margin-top: 1rem;
+
+    .colour-choice {
+        border: 2px solid transparent;
+        background-color: black;
+        cursor: pointer;
+        height: 1rem;
+        width: 1rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .colour-choice:nth-child(1) {
+        background-color: $headertext;
+    }
+
+    .colour-choice:nth-child(2) {
+        background-color: $headertext-red;
+    }
+
+    .colour-choice:nth-child(3) {
+        background-color: $headertext-blue;
+    }
+
+    .colour-choice:nth-child(4) {
+        background-color: $headertext-orange;
+    }
+
+    .active {
+        border: 2px solid black;
+        cursor: default;
+    }
+}
+
 /* Nav selectors */
 
 .subnav {
     display: none;
 }
 
-aside {
+aside.sidenav {
     background-color: $background2;
     border: 3px solid $headertext;
     border-radius: 1rem;

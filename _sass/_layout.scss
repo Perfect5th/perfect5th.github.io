@@ -285,16 +285,17 @@ dd {
 
 /* Colour Scheme Picker */
 
-aside.scheme-picker {
+aside.scheme-picker, aside.scheme-picker-mobile {
     float: right;
-    margin-right: 5.85rem;
     margin-top: 1rem;
+    width: 10%;
 
     .colour-choice {
         border: 2px solid transparent;
         background-color: black;
         cursor: pointer;
         height: 1rem;
+        margin-left: 1.2rem;
         width: 1rem;
         margin-bottom: 0.7rem;
     }
@@ -319,6 +320,10 @@ aside.scheme-picker {
         border: 2px solid black;
         cursor: default;
     }
+}
+
+aside.scheme-picker-mobile {
+    display: none;
 }
 
 /* Nav selectors */
@@ -521,6 +526,79 @@ aside.sidenav {
             text-decoration: none;
         }
 
+    }
+
+    aside.scheme-picker-mobile {
+        display: flex;
+        padding-left: 1rem;
+        position: absolute;
+        width: auto;
+
+        .colour-choice {
+            margin: 0;
+            margin-bottom: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .col:nth-child(2) {
+
+            .colour-choice:nth-child(1) {
+                background-color: $headertext-blue;
+            }
+
+            .colour-choice:nth-child(2) {
+                background-color: $headertext-orange;
+            }
+        }
+
+    }
+
+    html.rouge .subnav {
+
+        li {
+            background-color: $background2-red;
+            color: $background-red;
+        }
+
+        li.active {
+            background-color: $bodytext-red;
+        }
+
+        li:hover {
+            background-color: $bodytext-red;
+        }
+    }
+
+    html.bleu .subnav {
+
+        li {
+            background-color: $background2-blue;
+            color: $background-blue;
+        }
+
+        li.active {
+            background-color: $bodytext-blue;
+        }
+
+        li:hover {
+            background-color: $bodytext-blue;
+        }
+    }
+
+    html.orange .subnav {
+
+        li {
+            background-color: $background2-orange;
+            color: $background-orange;
+        }
+
+        li.active {
+            background-color: $bodytext-orange;
+        }
+
+        li:hover {
+            background-color: $bodytext-orange;
+        }
     }
 
     /* Blog Index */

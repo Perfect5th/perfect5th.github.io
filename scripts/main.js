@@ -23,6 +23,8 @@ function initElements() {
     if (currColour && currColour === item.dataset.colour)
       item.classList.add('active');
   }
+
+  changeColourText(currColour);
 }
 
 function colorHeader() {
@@ -35,6 +37,16 @@ function revertHeader() {
   h2.classList.remove('hovered');
 }
 
+function changeColourText(colour) {
+  // Changes the flavour text to match the selected colour theme.
+  var items = document.getElementsByClassName('colour-text');
+
+  for (var i = 0; i < items.length; i++) {
+    var item = items.item(i);
+    item.textContent = item.dataset[colour];
+  }
+}
+
 function changeColour(colour) {
   var root = document.getElementById('root');
 
@@ -42,6 +54,8 @@ function changeColour(colour) {
     root.classList.replace(root.classList.item(0), colour);
   else
     root.classList.add(colour);
+
+  changeColourText(colour);
 }
 
 function changeThemeColour() {

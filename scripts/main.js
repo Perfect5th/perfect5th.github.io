@@ -1,3 +1,8 @@
+var currColour = localStorage.getItem('colour');
+currColour = currColour ? currColour : 'vert';
+
+changeColour(currColour);
+
 document.addEventListener('DOMContentLoaded', initElements);
 
 function initElements() {
@@ -15,6 +20,8 @@ function initElements() {
     var item = pickers.item(i);
 
     item.onclick = changeThemeColour;
+    if (currColour && currColour === item.dataset.colour)
+      item.classList.add('active');
   }
 }
 
@@ -28,14 +35,19 @@ function revertHeader() {
   h2.classList.remove('hovered');
 }
 
-function changeThemeColour() {
-  var themeColour = this.dataset.colour;
+function changeColour(colour) {
   var root = document.getElementById('root');
 
   if (root.classList.length > 0)
-    root.classList.replace(root.classList.item(0), themeColour);
+    root.classList.replace(root.classList.item(0), colour);
   else
-    root.classList.add(themeColour);
+    root.classList.add(colour);
+}
+
+function changeThemeColour() {
+  var themeColour = this.dataset.colour;
+
+  changeColour(themeColour);
 
   var otherColours = document.getElementsByClassName('colour-choice');
   for (var i = 0; i < otherColours.length; i++) {
@@ -45,4 +57,7 @@ function changeThemeColour() {
   }
 
   this.classList.add('active');
+
+  // Store selection in localStorage
+  localStorage.setItem('colour', themeColour);
 }

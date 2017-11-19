@@ -68,9 +68,10 @@ function changeThemeColour() {
     var item = otherColours.item(i);
     if (item.classList.contains('active'))
       item.classList.remove('active');
-  }
 
-  this.classList.add('active');
+    if (item.dataset.colour === themeColour)
+      item.classList.add('active');
+  }
 
   // Store selection in localStorage
   localStorage.setItem('colour', themeColour);

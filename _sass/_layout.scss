@@ -69,11 +69,113 @@ html.rouge {
 }
 
 html.bleu {
-    background-color: $headertext-blue;
+    background-color: $background2-blue;
+    color: $bodytext-blue;
+
+    main {
+        background-color: $background-blue;
+    }
+
+    header {
+        border-color: $headertext-blue;
+        box-shadow: 0 0.1rem $background2-blue;
+    }
+
+    footer {
+        border-color: $headertext-blue;
+        box-shadow: 0 -0.1rem $background2-blue;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $headertext-blue;
+    }
+
+    table {
+        border-color: $headertext-blue;
+    }
+
+    a:hover {
+        color: $highlights-blue;
+    }
+
+    aside.sidenav {
+        background-color: $background2-blue;
+        border-color: $headertext-blue;
+        color: $background-blue;
+
+        li {
+            background-color: $bodytext-blue;
+        }
+    }
+
+    .blog-topper {
+        border-color: $headertext-blue;
+    }
+
+    .blog-list-item {
+        h2.hovered {
+            color: $background-blue;
+        }
+    }
+
+    .blog-list-item:hover {
+        background-color: $background2-blue;
+    }
 }
 
 html.orange {
-    background-color: $headertext-orange;
+    background-color: $background2-orange;
+    color: $bodytext-orange;
+
+    main {
+        background-color: $background-orange;
+    }
+
+    header {
+        border-color: $headertext-orange;
+        box-shadow: 0 0.1rem $background2-orange;
+    }
+
+    footer {
+        border-color: $headertext-orange;
+        box-shadow: 0 -0.1rem $background2-orange;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $headertext-orange;
+    }
+
+    table {
+        border-color: $headertext-orange;
+    }
+
+    a:hover {
+        color: $highlights-orange;
+    }
+
+    aside.sidenav {
+        background-color: $background2-orange;
+        border-color: $headertext-orange;
+        color: $background-orange;
+
+        li {
+            background-color: $bodytext-orange;
+        }
+    }
+
+    .blog-topper {
+        border-color: $headertext-orange;
+    }
+
+    .blog-list-item {
+        h2.hovered {
+            color: $background-orange;
+        }
+    }
+
+    .blog-list-item:hover {
+        background-color: $background2-orange;
+    }
 }
 
 main {

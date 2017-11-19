@@ -628,3 +628,11 @@ aside.sidenav {
     }
 
 }
+
+@media (max-width: 350px) {
+
+    aside.scheme-picker-mobile {
+        display: none;
+    }
+
+}

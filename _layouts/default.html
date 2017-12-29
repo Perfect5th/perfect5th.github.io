@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="root" class="vert">
+<html>
 
   {% include head.html %}
 
@@ -26,7 +26,9 @@
     <main>
       {% include header.html %}
 
-      {{ content }}
+      <div class="articles">
+        {{ content }}
+      </div>
 
       {% include footer.html %}
     </main>

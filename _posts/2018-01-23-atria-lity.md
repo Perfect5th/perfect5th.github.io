@@ -34,7 +34,7 @@ so [Work in Progress](http://wiki.mitchellburton.ca) was born!
 Obviously this is a work-in-progress, so things are pretty mild right now. It's
 running on the free tier of Heroku, so it has some inherent limitations. Still,
 for something I got running (thanks to
-[django-wiki](https://github.com/django-wiki/django-wiki/) in a couple of hours,
+[django-wiki](https://github.com/django-wiki/django-wiki/)) in a couple of hours,
 I could't be happier!
 
 Ciao for now!

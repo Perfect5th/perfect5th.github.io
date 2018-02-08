@@ -63,8 +63,50 @@ header {
         margin-bottom: 1.5rem;
     }
 
+    h3 {
+        color: $darkolivegreen;
+        font-size: 1.6em;
+        margin-bottom: 0;
+    }
+
     p {
         line-height: 1.6;
         font-weight: 400;
+    }
+
+    a {
+        color: inherit;
+        font-weight: 600;
+    }
+
+    dl {
+        margin-left: 1.6em;
+
+        dt {
+            font-weight: 600;
+            margin: 0.5em 0;
+        }
+
+        dd {
+            margin-bottom: 1em;
+            margin-left: 1.6em;
+            max-width: 86%;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    width: 75%;
+
+    div {
+        padding: 1.6em 0;
+    }
+
+    .footer-left {
+        margin-right: 1.6em;
     }
 }

@@ -110,3 +110,53 @@ footer {
         margin-right: 1.6em;
     }
 }
+
+@media (max-width: 956px) {
+
+    header {
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 11px;
+        }
+
+        .header-wrap {
+            margin-bottom: -1.2rem;
+
+            .header-right {
+                max-width: 8rem;
+
+                p {
+                    margin-top: 0;
+                    padding-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 834px) {
+
+    header {
+        margin-left: 12.5%;
+        width: 400px;
+
+        .header-wrap {
+            margin-bottom: -0.42em;
+
+            .header-left {
+
+                h1 {
+                    line-height: 3.3rem;
+                    margin-bottom: 0;
+                }
+            }
+
+            .header-right {
+                display: flex;
+                flex-direction: column-reverse;
+                margin-bottom: -0.16rem;
+            }
+        }
+    }
+}

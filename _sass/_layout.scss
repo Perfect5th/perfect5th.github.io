@@ -16,7 +16,7 @@ body {
 
 main {
     display: grid;
-    grid-template-rows: 15rem 1fr;
+    grid-template-rows: 9.6rem 1fr;
 }
 
 header, article {
@@ -29,23 +29,30 @@ header {
     display: flex;
     flex-direction: column-reverse;
     font-family: 'Lato', sans-serif;
+    margin: 0 7.5%;
     min-height: 100%;
 
     .header-wrap {
         display: flex;
-        margin-bottom: -1.5rem;
+        flex-direction: column;
+        margin-bottom: 15%;
     }
 
     .header-right {
-        max-width: 6rem;
+
+        p {
+            margin: 0;
+            padding: 0 0 0 0.25rem;
+        }
     }
 
     h1 {
         color: $firebrick;
         display: inline;
         font-family: 'Lato', sans-serif;
-        font-size: 5rem;
-        font-weight: 900;
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 0.8;
         margin: 0;
     }
 }
@@ -53,7 +60,7 @@ header {
 .articles {
     background-color: $darkorange;
     color: $linen;
-    padding-top: 1.5rem;
+    padding-top: 0;
 
     h2 {
         border-bottom: 2px solid $sandybrown;
@@ -108,66 +115,5 @@ footer {
 
     .footer-left {
         margin-right: 1.6em;
-    }
-}
-
-@media (max-width: 450px) {
-
-    header {
-
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 11px;
-        }
-
-        .header-wrap {
-            margin-bottom: -1.2rem;
-
-            .header-right {
-                max-width: 8rem;
-
-                p {
-                    margin-top: 0;
-                    padding-top: 1rem;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1000px) {
-
-    main {
-        grid-template-rows: 9.6rem 1fr;
-    }
-
-    header {
-        margin: 0 7.5%;
-
-        .header-wrap {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: -0.1rem;
-
-            .header-left {
-
-                h1 {
-                    font-size: 3rem;
-                    line-height: 0.8;
-                    margin-bottom: 0;
-                }
-            }
-
-            .header-right {
-
-                p {
-                    padding: 0 0 0 0.25rem;
-                }
-            }
-        }
-    }
-
-    .articles {
-        padding-top: 0;
     }
 }

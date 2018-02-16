@@ -111,7 +111,7 @@ footer {
     }
 }
 
-@media (max-width: 956px) {
+@media (max-width: 450px) {
 
     header {
 
@@ -135,28 +135,39 @@ footer {
     }
 }
 
-@media (max-width: 834px) {
+@media (max-width: 1000px) {
+
+    main {
+        grid-template-rows: 9.6rem 1fr;
+    }
 
     header {
-        margin-left: 12.5%;
-        width: 400px;
+        margin: 0 7.5%;
 
         .header-wrap {
-            margin-bottom: -0.42em;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: -0.1rem;
 
             .header-left {
 
                 h1 {
-                    line-height: 3.3rem;
+                    font-size: 3rem;
+                    line-height: 0.8;
                     margin-bottom: 0;
                 }
             }
 
             .header-right {
-                display: flex;
-                flex-direction: column-reverse;
-                margin-bottom: -0.16rem;
+
+                p {
+                    padding: 0 0 0 0.25rem;
+                }
             }
         }
+    }
+
+    .articles {
+        padding-top: 0;
     }
 }

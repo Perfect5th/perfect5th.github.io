@@ -148,18 +148,35 @@ footer {
 
         li {
             background-color: $linen;
-            border-top: 1px solid $darkolivegreen;
+            border-bottom: 1px solid $darkolivegreen;
             border-left: 1px solid $darkolivegreen;
             padding: 1rem;
+            transition: background-color 0.5s;
             width: 100%;
         }
 
-        .first-nav {
-            border-top: none;
+        li:hover, li.active {
+            background-color: darken($linen, 10%);
         }
 
-        .last-nav {
-            border-bottom: 1px solid $darkolivegreen;
+        .first-nav {
+            background-color: $darkorange;
+            border-bottom: none;
+            cursor: pointer;
+            font-size: 2rem;
+            font-weight: 900;
+            padding-bottom: 0;
+            padding-top: 0;
+            text-align: right;
+
+        }
+
+        .first-nav:hover {
+            background-color: $darkorange;
+        }
+
+        .first-nav-desktop {
+            display: none;
         }
     }
 }
@@ -185,4 +202,26 @@ footer {
             }
         }
     }
+
+    .mobile-nav {
+
+        .hamburger {
+            display: none;
+        }
+
+        .nav-items {
+            left: 0px;
+
+            .first-nav {
+                display: none;
+            }
+
+            .first-nav-desktop {
+                display: block;
+                height: 1rem;
+            }
+        }
+    }
+
+
 }

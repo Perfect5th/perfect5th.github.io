@@ -2,15 +2,17 @@
 layout: default
 ---
 
-<!--<nav class="subnav">
-  <ul>
+<nav class="mobile-nav">
+  <div class="hamburger" id="hamburger" onclick=showNav()>&#9776;</div>
+  <ul class="nav-items" id="nav-items">
+    <li class="first-nav" id="close-nav">&#735;</li>
     <a href="/"><li class="active">Home</li></a>
     <a href="/posts"><li>Blog</li></a>
-    <a href="/projects"><li>Projects</li></a>
+    <a href="/projects"><li class="last-nav">Projects</li></a>
   </ul>
 </nav>
 
-<aside class="sidenav">
+<!-- <aside class="sidenav">
   <nav>
     <ul>
       <a href="/"><li class="active">Home</li></a>

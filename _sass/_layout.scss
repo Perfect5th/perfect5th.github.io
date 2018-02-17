@@ -117,3 +117,26 @@ footer {
         margin-right: 1.6em;
     }
 }
+
+@media (min-width: 980px) {
+
+    header {
+        margin: 0 12%;
+
+        .header-wrap {
+            flex-direction: row;
+            margin-bottom: 0;
+
+            h1 {
+                font-size: 5rem;
+            }
+
+            .header-right {
+                display: flex;
+                flex-direction: column-reverse;
+                max-width: 7rem;
+                padding-bottom: 0.4rem;
+            }
+        }
+    }
+}

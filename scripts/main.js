@@ -1,4 +1,4 @@
-activeTechInfos = [];
+activeTechInfos = ['tech-initial'];
 
 function showNav(event) {
   var navItems = document.getElementById('nav-items');
@@ -37,13 +37,17 @@ function toggleSkillInfo() {
 }
 
 function hideTechInfo(techItem) {
-  techItem.style.height = '0';
+  techItem.style.opacity = '0';
+  techItem.style.height = '0px';
   techItem.style.display = 'none';
 }
 
 function showTechInfo(techItem) {
   techItem.style.display = 'block';
-  techItem.style.height = '100%';
+  window.setTimeout(function () {
+    techItem.style.height = '145px';
+    techItem.style.opacity = '1';
+  }, 100);
 }
 
 function toggleTechInfo() {

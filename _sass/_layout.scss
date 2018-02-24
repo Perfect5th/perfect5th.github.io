@@ -143,6 +143,8 @@ header {
 }
 
 .tech-icons {
+    background-color: darken($linen, 5%);
+    border-radius: 0.5rem 0.5rem 0 0;
     display: flex;
 
     .tech-icon {
@@ -156,13 +158,22 @@ header {
 
 .tech-info {
     background-color: darken($linen, 5%);
+    border-radius: 0 0 0.5rem 0.5rem;
     display: none;
     height: 0;
-    margin-left: 0;
-    margin-top: 0;
+    margin: 0;
     overflow: hidden;
+    opacity: 0;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    transition: 0.5s ease-out;
+    transition-property: height opacity;
+}
+
+.tech-info-initial {
+    display: block;
+    height: 145px;
+    opacity: 1;
 }
 
 footer {

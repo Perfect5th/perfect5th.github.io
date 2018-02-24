@@ -14,6 +14,12 @@ layout: default
 </nav>
 
 <article class="introduction">
+  <div class="introduction-image">
+    <div>
+      INTRODUCTION IMAGE HERE
+    </div>
+  </div>
+
   <div class="introduction-text">
     <h2>Hello!</h2>
     <p>My name is Mitch Burton, and I make things on and for the web.</p>
@@ -33,12 +39,6 @@ layout: default
       take it. If you like the design of the site, let me know!
     </p>
   </div>
-
-  <div class="introduction-image">
-    <div>
-      INTRODUCTION IMAGE HERE
-    </div>
-  </div>
 </article>
 
 <article>
@@ -48,46 +48,69 @@ layout: default
     bit more detail what I do.
   </p>
 
-  <h3>Web Apps</h3>
-  <p>
-    My current full-time job is as a web app developer! I make stuff that does
-    stuff. Neat stuff! Trust me!
-  </p>
-  <p>
-    I&rsquo;m a full-stack web developer at Biolux Research, Ltd. in Vancouver,
-    BC. This includes developing and maintaining a web portal, REST API, and
-    online store as part of a small team. Being on a small team is great, as it
-    lets me experiment with new technologies, and come up with creative
-    solutions &ndash; turning my own and others&rsquo; ideas into reality.
-  </p>
+  <div class="fields-infos">
+    <div class="field-info field-apps">
+      <h3>Web Apps</h3>
+      <div id="field-apps-image" class="field-image" data-target="field-apps-text">
+        WEB APPS IMAGE HERE
+      </div>
+      <div id="field-apps-text" class="field-text">
+        <p>
+          My current full-time job is as a web app developer! I make stuff that does
+          stuff. Neat stuff! Trust me!
+        </p>
+        <p>
+          I&rsquo;m a full-stack web developer at Biolux Research, Ltd. in Vancouver,
+          BC. This includes developing and maintaining a web portal, REST API, and
+          online store as part of a small team. Being on a small team is great, as it
+          lets me experiment with new technologies, and come up with creative
+          solutions &ndash; turning my own and others&rsquo; ideas into reality.
+        </p>
+      </div>
+    </div>
 
-  <h3>Web Design</h3>
-  <p>Design is a newer passion of mine, but I&rsquo;m diving right into it!</p>
-  <p>
-    As a member of a (very) small development team, having strong design skills
-    is an absolute must. While I&rsquo;ll admit that I am not the most
-    experienced designer, I pride myself on a nearly fanatical attention to
-    detail. I value clean, intuitive design, with an emphasis on consistency and
-    reusability of components. Also, I <em>really</em> like
-    <span class="colour-text"
-      data-vert="green"
-      data-rouge="red"
-      data-bleu="blue"
-      data-orange="orange">
-      green
-    </span>.
-  </p>
+    <div class="field-info field-design">
+      <h3>Web Design</h3>
+      <div id="field-design-image" class="field-image" data-target="field-design-text">
+        WEB DESIGN IMAGE HERE
+      </div>
+      <div id="field-design-text" class="field-text">
+        <p>Design is a newer passion of mine, but I&rsquo;m diving right into it!</p>
+        <p>
+          As a member of a (very) small development team, having strong design skills
+          is an absolute must. While I&rsquo;ll admit that I am not the most
+          experienced designer, I pride myself on a nearly fanatical attention to
+          detail. I value clean, intuitive design, with an emphasis on consistency and
+          reusability of components. Also, I <em>really</em> like
+          <span class="colour-text"
+          data-vert="green"
+          data-rouge="red"
+          data-bleu="blue"
+          data-orange="orange">
+            green
+          </span>.
+        </p>
+      </div>
+    </div>
 
-  <h3>Data Analysis</h3>
-  <p>Learning things requires data, and data is one of the things I do best!</p>
-  <p>
-    With my background in biochemistry, I started my career in a
-    research-oriented role. I have a high-level working knowledge of statistical
-    analysis, which I do <em>not</em> hesitate to bore people with. Give me a
-    big, fat dataset and throw me in a quiet room &ndash; I can&rsquo;t promise
-    you&rsquo;ll get the results you want, but statistically-supported
-    conclusions are a thing of beauty.
-  </p>
+    <div class="field-info field-analysis">
+      <h3>Data Analysis</h3>
+      <div id="field-analysis-image" class="field-image" data-target="field-analysis-text">
+        DATA ANALYSIS IMAGE HERE
+      </div>
+      <div id="field-analysis-text" class="field-text">
+        <p>Learning things requires data, and data is one of the things I do best!</p>
+        <p>
+          With my background in biochemistry, I started my career in a
+          research-oriented role. I have a high-level working knowledge of statistical
+          analysis, which I do <em>not</em> hesitate to bore people with. Give me a
+          big, fat dataset and throw me in a quiet room &ndash; I can&rsquo;t promise
+          you&rsquo;ll get the results you want, but statistically-supported
+          conclusions are a thing of beauty.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <h3>Technologies I &lt;3</h3>
   <p>
@@ -95,7 +118,28 @@ layout: default
     <em>should</em> be constantly expanding. Otherwise, I&rsquo;m probably dead
     &ndash; someone tell my family!
   </p>
-  <dl>
+  <p>Click one of the icons below to learn more about what I do with each.</p>
+  <div class="tech-icons">
+    <div class="tech-icon" data-target="tech-python">
+      PYTHON IMAGE
+    </div>
+    <div class="tech-icon" data-target="tech-js">
+      JS IMAGE
+    </div>
+    <div class="tech-icon" data-target="tech-r">
+      R IMAGE
+    </div>
+    <div class="tech-icon" data-target="tech-sql">
+      SQL IMAGE
+    </div>
+    <div class="tech-icon" data-target="tech-htmlcss">
+      HTML/CSS IMAGE
+    </div>
+    <div class="tech-icon" data-target="tech-other">
+      OTHER IMAGE
+    </div>
+  </div>
+  <dl id="tech-python" class="tech-info">
     <dt>Python</dt>
     <dd>
       Python is the language that I work in most frequently, as it&rsquo;s the
@@ -104,7 +148,9 @@ layout: default
       (mainly Django) statistics, and automating boring tasks &ndash; sorry,
       <em>optimizations</em>.
     </dd>
+  </dl>
 
+  <dl id="tech-js" class="tech-info">
     <dt>JavaScript</dt>
     <dd>
       JS is where it&rsquo;s at right now, and I get the hype. I love JavaScript
@@ -114,7 +160,9 @@ layout: default
       front. I also know jQuery, but I wasn&rsquo;t going to mention that
       because I&rsquo;m sure you don&rsquo;t care!
     </dd>
+  </dl>
 
+  <dl id="tech-r" class="tech-info">
     <dt>R</dt>
     <dd>
       Although most of my stats work nowadays has moved to Python, I still have
@@ -122,7 +170,9 @@ layout: default
       a sassy multilevel regression, I&rsquo;ll often dust off the ol&rsquo; R
       shell.
     </dd>
+  </dl>
 
+  <dl id="tech-sql" class="tech-info">
     <dt>SQL</dt>
     <dd>
       I know enough SQL to avoid stabbing myself in the eye with a tricky
@@ -132,13 +182,17 @@ layout: default
       done some work with mongo, but I&rsquo;m a novice at best. Isn&rsquo;t
       this honesty <em>refreshing?</em>
     </dd>
+  </dl>
 
+  <dl id="tech-htmlcss" class="tech-info">
     <dt>HTML &amp; CSS</dt>
     <dd>
       I know both of these, yay! I&rsquo;m a fan of Sass, and will use literally
       whatever template engine I can get my hands on.
     </dd>
+  </dl>
 
+  <dl id="tech-other" class="tech-info">
     <dt><em>Others?</em></dt>
     <dd>
       I&rsquo;m always working on learning something! Right now, those

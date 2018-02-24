@@ -66,7 +66,7 @@ header {
         border-bottom: 2px solid $sandybrown;
         color: $firebrick;
         font-family: 'Bitter', serif;
-        font-size: 3rem;
+        font-size: 2.6rem;
         font-weight: 400;
         margin-bottom: 1.5rem;
     }
@@ -88,7 +88,7 @@ header {
     }
 
     dl {
-        margin-left: 1.6em;
+        padding-left: 1rem;
 
         dt {
             font-weight: 600;
@@ -106,10 +106,14 @@ header {
 /* Index Page Selectors */
 
 .introduction {
-    display: grid;
-    grid-template-columns: 1fr 500px;
+    display: flex;
+    flex-direction: row-reverse;
 
     .introduction-image {
+        border: 1px solid $firebrick;
+        border-radius: 1rem;
+        margin-top: 2rem;
+        min-width: 500px;
         padding: 4rem;
 
         div {
@@ -117,6 +121,48 @@ header {
             padding-top: 30%;
         }
     }
+}
+
+.fields-infos {
+    display: flex;
+
+    .field-image {
+        border: 1px solid $firebrick;
+        cursor: pointer;
+        height: 16rem;
+        width: 397px; /* Just until actual images are in here */
+    }
+
+    .field-text {
+        height: 0px;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0 1.5rem;
+        transition: height 0.75s ease-out;
+    }
+}
+
+.tech-icons {
+    display: flex;
+
+    .tech-icon {
+        border: 1px solid $firebrick;
+        cursor: pointer;
+        height: 5rem;
+        margin-right: 1rem;
+        width: 5rem;
+    }
+}
+
+.tech-info {
+    background-color: darken($linen, 5%);
+    display: none;
+    height: 0;
+    margin-left: 0;
+    margin-top: 0;
+    overflow: hidden;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 footer {

@@ -3,7 +3,7 @@ layout: default
 ---
 
 <nav class="mobile-nav">
-  <div class="hamburger" id="hamburger" onclick=showNav()>&#9776;</div>
+  <div class="hamburger" id="hamburger"><span onclick=showNav()>&#9776;</span></div>
   <ul class="nav-items" id="nav-items">
     <li class="first-nav" id="close-nav" onclick=closeNav()>></li>
     <li class="first-nav first-nav-desktop"></li>
@@ -13,24 +13,32 @@ layout: default
   </ul>
 </nav>
 
-<article>
-  <h2>Hello!</h2>
-  <p>My name is Mitch Burton, and I make things on and for the web.</p>
-  <p>
-    This site is a place where I can experiment, blog, and occasionally break things.
-    My number one favourite thing to do is challenge myself to learn new things,
-    so if you have an interesting project in mind,
-    <em>please let me know about it</em>.
-  </p>
-  <p>
-    If something on here looks like hot garbage, or you just want to ask me
-    something that won&rsquo;t irreparably damage my self-esteem, you can contact
-    me at <a class="external" href="mailto:mitch@mitchellburton.ca">mitch@mitchellburton.ca</a>.
-  </p>
-  <p>
-    Feel free to sign me up for as many spam mailing lists as you like, I can
-    take it. If you like the design of the site, let me know!
-  </p>
+<article class="introduction">
+  <div class="introduction-text">
+    <h2>Hello!</h2>
+    <p>My name is Mitch Burton, and I make things on and for the web.</p>
+    <p>
+      This site is a place where I can experiment, blog, and occasionally break things.
+      My number one favourite thing to do is challenge myself to learn new things,
+      so if you have an interesting project in mind,
+      <em>please let me know about it</em>.
+    </p>
+    <p>
+      If something on here looks like hot garbage, or you just want to ask me
+      something that won&rsquo;t irreparably damage my self-esteem, you can contact
+      me at <a class="external" href="mailto:mitch@mitchellburton.ca">mitch@mitchellburton.ca</a>.
+    </p>
+    <p>
+      Feel free to sign me up for as many spam mailing lists as you like, I can
+      take it. If you like the design of the site, let me know!
+    </p>
+  </div>
+
+  <div class="introduction-image">
+    <div>
+      INTRODUCTION IMAGE HERE
+    </div>
+  </div>
 </article>
 
 <article>

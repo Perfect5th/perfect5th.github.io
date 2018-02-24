@@ -5,7 +5,7 @@
 }
 
 html {
-    background-color: $linen;
+    background-color: $firebrick;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
@@ -47,7 +47,7 @@ header {
     }
 
     h1 {
-        color: $firebrick;
+        color: $linen;
         display: inline;
         font-family: 'Lato', sans-serif;
         font-size: 3rem;
@@ -58,20 +58,21 @@ header {
 }
 
 .articles {
-    background-color: $darkorange;
-    color: $linen;
+    background-color: $linen;
+    color: $darkolivegreen;
     padding-top: 0;
 
     h2 {
         border-bottom: 2px solid $sandybrown;
-        color: $darkolivegreen;
-        font-family: 'Zilla Slab', serif;
+        color: $firebrick;
+        font-family: 'Bitter', serif;
         font-size: 3rem;
+        font-weight: 400;
         margin-bottom: 1.5rem;
     }
 
     h3 {
-        color: $darkolivegreen;
+        color: $firebrick;
         font-size: 1.6em;
         margin-bottom: 0;
     }
@@ -102,7 +103,24 @@ header {
     }
 }
 
+/* Index Page Selectors */
+
+.introduction {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+
+    .introduction-image {
+        padding: 4rem;
+
+        div {
+            text-align: center;
+            padding-top: 30%;
+        }
+    }
+}
+
 footer {
+    color: $linen;
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
@@ -115,22 +133,30 @@ footer {
 
     .footer-left {
         margin-right: 1.6em;
+
+        a {
+            color: $linen;
+        }
     }
 }
 
 /* Mobile Nav Selectors */
 .mobile-nav {
     color: $darkolivegreen;
+    font-family: 'Bitter', serif;
     position: fixed;
-    top: 0;
     right: 0;
+    top: 0;
     z-index: 100;
 
     .hamburger {
-        cursor: pointer;
         font-size: 1.6rem;
-        padding: 1rem 1rem 0 1rem;
+        padding: 0.4rem 1rem 0 1rem;
         text-align: right;
+
+        span {
+            cursor: pointer;
+        }
     }
 
     .nav-items {
@@ -144,6 +170,7 @@ footer {
 
         a {
             text-decoration: none;
+            font-weight: 400;
         }
 
         li {
@@ -160,12 +187,12 @@ footer {
         }
 
         .first-nav {
-            background-color: $darkorange;
+            background-color: $firebrick;
             border-bottom: none;
             cursor: pointer;
-            font-size: 2rem;
+            font-size: 1.4rem;
             font-weight: 900;
-            padding-bottom: 0;
+            padding-bottom: 0.4rem;
             padding-top: 0;
             text-align: right;
 
@@ -181,6 +208,10 @@ footer {
     }
 }
 
+.desktop-nav {
+    display: none;
+}
+
 @media (min-width: 980px) {
 
     header {
@@ -189,6 +220,10 @@ footer {
         .header-wrap {
             flex-direction: row;
             margin-bottom: 0;
+
+            .header-left {
+                max-width: 339px;
+            }
 
             h1 {
                 font-size: 5rem;
@@ -204,24 +239,53 @@ footer {
     }
 
     .mobile-nav {
+        display: none;
+    }
 
-        .hamburger {
-            display: none;
+    .desktop-nav {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 10%;
+
+        .nav-item-wrap {
+            display: flex;
         }
 
-        .nav-items {
-            left: 0px;
+        .nav-item {
+            background-color: fade-out($linen, 0.2);
+            border-radius: 0.1rem 0.1rem 0 0;
+            font-family: 'Bitter', serif;
+            height: 95%;
+            margin-right: 1rem;
+            padding: 1.4rem 1rem 1.2rem 1rem;
+            text-align: center;
+            width: 6rem;
 
-            .first-nav {
-                display: none;
+            p {
+                margin: 0;
             }
+        }
 
-            .first-nav-desktop {
-                display: block;
-                height: 1rem;
+        .nav-item-active {
+            background-color: $linen;
+            height: 100%;
+        }
+
+        a {
+            color: $darkolivegreen;
+            text-decoration: none;
+        }
+    }
+}
+
+@media (min-width: 1584px) {
+    header {
+
+        .header-wrap {
+
+            .header-left {
+                max-width: none;
             }
         }
     }
-
-
 }

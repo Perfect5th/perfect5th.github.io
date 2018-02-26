@@ -105,20 +105,42 @@ header {
 
 /* Index Page Selectors */
 
+@keyframes steam {
+    from {
+        stroke-dashoffset: 100%;
+    }
+
+    to {
+        stroke-dashoffset: -100%;
+    }
+}
+
 .introduction {
     display: flex;
     flex-direction: row-reverse;
 
     .introduction-image {
-        border: 1px solid $firebrick;
-        border-radius: 1rem;
         margin-top: 2rem;
         min-width: 500px;
-        padding: 4rem;
+        padding: 0 3rem;
 
         div {
-            text-align: center;
-            padding-top: 30%;
+            height: 0;
+            padding-top: 23rem;
+            position: relative;
+        }
+
+        svg {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            .tea-steam {
+                animation: steam 5s linear infinite;
+                transform-origin: 525px 0px;
+            }
         }
     }
 }
@@ -173,7 +195,7 @@ header {
     padding-top: 1rem;
     padding-bottom: 1rem;
     transition: 0.5s ease-out;
-    transition-property: height opacity;
+    transition-property: height, opacity;
 }
 
 .tech-info-initial {

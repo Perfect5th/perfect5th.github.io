@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 523.07217 234.5714"
+   height="66.201263mm"
+   width="147.62259mm">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4742">
+      <stop
+         id="stop4744"
+         offset="0"
+         style="stop-color:#1d1d1d;stop-opacity:1;" />
+      <stop
+         id="stop4746"
+         offset="1"
+         style="stop-color:#1d1d1d;stop-opacity:0.903" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4715">
+      <stop
+         id="stop4717"
+         offset="0"
+         style="stop-color:#1a1a1a;stop-opacity:0.757" />
+      <stop
+         id="stop4719"
+         offset="1"
+         style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+    <filter
+       height="1.2482971"
+       y="-0.12414857"
+       width="1.1297075"
+       x="-0.064853728"
+       id="filter4711"
+       style="color-interpolation-filters:sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur4713"
+         stdDeviation="0.2263125" />
+    </filter>
+    <linearGradient
+       spreadMethod="pad"
+       gradientUnits="userSpaceOnUse"
+       y2="451.61823"
+       x2="565.66138"
+       y1="451.61823"
+       x1="490.66959"
+       id="linearGradient4721"
+       xlink:href="#linearGradient4715" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="477.09656"
+       x2="414.2796"
+       y1="287.9455"
+       x1="122.16331"
+       id="linearGradient4748"
+       xlink:href="#linearGradient4742" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-68.071447,-268.29077)"
+     id="layer1">
+    <path
+       id="rect4750"
+       d="m 565.44131,423.74429 c 11.10897,0 22.05229,-0.80668 22.05229,26.87006 0,27.17674 -10.94332,26.87006 -22.05229,26.87006"
+       style="opacity:0.903;fill:none;fill-opacity:1;stroke:#1e1e1e;stroke-width:7.30000019;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       ry="3.5714285"
+       y="278.79077"
+       x="113.57143"
+       height="203.57143"
+       width="310.71429"
+       id="rect4136"
+       style="fill:url(#linearGradient4748);fill-opacity:1;stroke:#6d2b15;stroke-width:21;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       id="rect4138"
+       d="m 68.686106,482.77759 400.484954,0 c 0.0312,0 0.0564,0.0252 0.0564,0.0564 l 0,12.92526 c 0,3.91476 -5.19592,6.54468 -10.48623,6.54468 l -382.426218,0 c -2.859375,0 -7.685316,-1.69708 -7.685316,-6.5564 l 0,-12.91354 c 0,-0.0312 0.02516,-0.0564 0.05641,-0.0564 z"
+       style="fill:#b24523;fill-opacity:1;stroke:#b24523;stroke-width:1.11649811;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       ry="2.1875"
+       y="490.36221"
+       x="85.625"
+       height="4.375"
+       width="8.375"
+       id="rect4144"
+       style="fill:#7ef694;fill-opacity:1;stroke:#b24523;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4711)" />
+    <path
+       id="rect4138-3"
+       d="m 490.68022,401.01086 74.97064,0 c 0.006,0 0.0105,0.1306 0.0105,0.29234 l 0,85.1171 c 0,16.00514 -13.65641,15.80441 -14.64675,15.80441 l -44.53134,0 c -0.53527,0 -15.81369,0.39567 -15.81369,-15.86519 l 0,-85.05632 c 0,-0.16174 0.005,-0.29234 0.0105,-0.29234 z"
+       style="opacity:1;fill:url(#linearGradient4721);fill-opacity:1;stroke:none;stroke-width:1.09981644;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       id="path4753"
+       d="m 528.16547,391.61221 c 18.88548,-12.93521 22.72717,-21.52757 0,-34.25 -22.72717,-12.72243 -18.32389,-21.92413 0,-34.25"
+       style="fill:none;fill-rule:evenodd;stroke:#7d7d7d;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+</svg>

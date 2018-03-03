@@ -65,9 +65,10 @@ header {
     h2 {
         border-bottom: 2px solid $sandybrown;
         color: $firebrick;
-        font-family: 'Bitter', serif;
+        font-family: 'Lato', serif;
         font-size: 2.6rem;
-        font-weight: 400;
+        font-variant: small-caps;
+        font-weight: 900;
         margin-bottom: 1.5rem;
     }
 
@@ -88,17 +89,17 @@ header {
     }
 
     dl {
-        padding-left: 1rem;
+        padding: 1rem;
 
         dt {
             font-weight: 600;
-            margin: 0.5em 0;
+            margin: 0 0 0.5em 0;
         }
 
         dd {
-            margin-bottom: 1em;
-            margin-left: 1.6em;
-            max-width: 86%;
+            margin-left: 0;
+            padding-bottom: 1rem;
+            line-height: 1.5;
         }
     }
 }
@@ -166,12 +167,12 @@ header {
     border-radius: 0.5rem 0.5rem 0 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     .tech-icon {
         border: 1px solid $firebrick;
         cursor: pointer;
         height: 5rem;
-        margin-right: 1rem;
         width: 5rem;
     }
 }
@@ -192,7 +193,7 @@ header {
 
 .tech-info-initial {
     display: block;
-    height: 145px;
+    height: auto;
     opacity: 1;
 }
 
@@ -221,6 +222,7 @@ footer {
 .mobile-nav {
     color: $darkolivegreen;
     font-family: 'Bitter', serif;
+    height: 0;
     position: fixed;
     right: 0;
     top: 0;

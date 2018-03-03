@@ -22,7 +22,7 @@ main {
 header, article {
     margin: auto;
     max-width: 1200px;
-    width: 75%;
+    width: 85%;
 }
 
 header {
@@ -118,23 +118,14 @@ header {
 .introduction {
     display: flex;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
 
     .introduction-image {
         margin-top: 2rem;
-        min-width: 500px;
-        padding: 0 3rem;
-
-        div {
-            height: 0;
-            padding-top: 23rem;
-            position: relative;
-        }
+        width: 100%;
 
         svg {
             height: 100%;
-            left: 0;
-            position: absolute;
-            top: 0;
             width: 100%;
 
             .tea-steam {
@@ -147,12 +138,14 @@ header {
 
 .fields-infos {
     display: flex;
+    flex-wrap: wrap;
 
     .field-image {
         border: 1px solid $firebrick;
         cursor: pointer;
-        height: 16rem;
-        width: 397px; /* Just until actual images are in here */
+        padding-top: 16rem;
+        position: relative;
+        width: 100%;
     }
 
     .field-text {
@@ -171,8 +164,8 @@ header {
 .tech-icons {
     background-color: darken($linen, 2.5%);
     border-radius: 0.5rem 0.5rem 0 0;
-    box-shadow: inset 0 2px 4px -1px hsla(0, 0%, 0%, 0.08);
     display: flex;
+    flex-wrap: wrap;
 
     .tech-icon {
         border: 1px solid $firebrick;
@@ -186,7 +179,6 @@ header {
 .tech-info {
     background-color: darken($linen, 2.5%);
     border-radius: 0 0 0.5rem 0.5rem;
-    box-shadow: inset 0 -2px 4px -1px hsla(0, 0%, 0%, 0.08);
     display: none;
     height: 0;
     margin: 0;

@@ -31,7 +31,7 @@ function toggleSkillInfo() {
       skillItem.style.opacity = '0';
     }, 600);
   } else {
-    skillItem.style.height = '330px';
+    skillItem.style.height = skillItem.scrollHeight + 'px';
     skillItem.style.opacity = '1';
   }
 }
@@ -44,7 +44,7 @@ function hideTechInfo(techItem) {
 function showTechInfo(techItem) {
   techItem.style.display = 'block';
   window.setTimeout(function () {
-    techItem.style.height = '145px';
+    techItem.style.height = techItem.scrollHeight + 'px';
   }, 25);
 }
 

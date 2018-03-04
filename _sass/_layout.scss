@@ -19,6 +19,10 @@ main {
     grid-template-rows: 9.6rem 1fr;
 }
 
+svg {
+    pointer-events: none;
+}
+
 header, article {
     margin: auto;
     max-width: 1200px;
@@ -142,11 +146,18 @@ header {
     flex-wrap: wrap;
 
     .field-image {
-        border: 1px solid $firebrick;
         cursor: pointer;
-        padding-top: 16rem;
-        position: relative;
+        margin-top: 1rem;
         width: 100%;
+
+        svg {
+            height: auto;
+            width: 100%;
+
+            .field-arrow {
+                transform-origin: 640px 970px;
+            }
+        }
     }
 
     .field-text {

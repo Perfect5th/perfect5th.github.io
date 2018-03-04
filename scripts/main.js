@@ -21,18 +21,38 @@ function closeNav(event) {
   }, 500);
 }
 
+function flipVertically(element, start, end, ms) {
+  var current = start;
+  var direction = start <= end ? 10 : -10;
+
+  var tick = setInterval(() => {
+    if (current === end) {
+      clearInterval(tick);
+    } else {
+      current += direction;
+      element.style.transform = 'rotateX(' + current + 'deg)';
+    }
+  }, ms / (Math.abs(start - end) / 10));
+}
+
 function toggleSkillInfo() {
-  var skillItem = document.getElementById(this.dataset.target);
+  var skillItem = document.getElementById(this.dataset.target + '-text');
   var opacity = skillItem.style.opacity;
+  var selectorArrow = document.getElementById(this.dataset.target + '-arrow');
 
   if (opacity === '1') {
     skillItem.style.height = '0px';
     window.setTimeout(function () {
       skillItem.style.opacity = '0';
     }, 600);
+
+    flipVertically(selectorArrow, 180, 0, 250);
+
   } else {
     skillItem.style.height = skillItem.scrollHeight + 'px';
     skillItem.style.opacity = '1';
+
+    flipVertically(selectorArrow, 0, 180, 250);
   }
 }
 

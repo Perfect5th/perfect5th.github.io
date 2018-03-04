@@ -25,7 +25,7 @@ function flipVertically(element, start, end, ms) {
   var current = start;
   var direction = start <= end ? 10 : -10;
 
-  var tick = setInterval(() => {
+  var tick = setInterval(function () {
     if (current === end) {
       clearInterval(tick);
     } else {

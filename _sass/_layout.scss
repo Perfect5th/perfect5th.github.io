@@ -185,10 +185,14 @@ header {
     justify-content: space-between;
 
     .tech-icon {
-        border: 1px solid $firebrick;
         cursor: pointer;
         height: 5rem;
         width: 5rem;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
@@ -256,7 +260,7 @@ footer {
     .nav-items {
         font-size: 1.2rem;
         list-style: none;
-        left: 105px;
+        left: 110px;
         margin-top: 0;
         padding: 0;
         position: relative;

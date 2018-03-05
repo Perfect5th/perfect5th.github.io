@@ -14,7 +14,7 @@ function closeNav(event) {
   var hamburger = document.getElementById('hamburger');
 
   navItems.classList.remove('nav-items-shown');
-  navItems.style.left = '105px';
+  navItems.style.left = '110px';
 
   setTimeout(function () {
     hamburger.style.display = 'block';

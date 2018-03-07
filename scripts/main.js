@@ -1,78 +1,143 @@
-var currColour = localStorage.getItem('colour');
-currColour = currColour ? currColour : 'vert';
+activeTechInfos = ['tech-initial'];
 
-changeColour(currColour);
+function showNav(event) {
+  var navItems = document.getElementById('nav-items');
+  var hamburger = document.getElementById('hamburger');
 
-document.addEventListener('DOMContentLoaded', initElements);
+  hamburger.style.display = 'none';
+  navItems.classList.add('nav-items-shown');
+  navItems.style.left = '0px';
+}
 
-function initElements() {
-  var p = document.getElementsByClassName('blog-list-item');
+function closeNav(event) {
+  var navItems = document.getElementById('nav-items');
+  var hamburger = document.getElementById('hamburger');
 
-  for (var i = 0; i < p.length; i++) {
-    var item = p.item(i);
-    item.onmouseover = colorHeader;
-    item.onmouseout = revertHeader;
+  navItems.classList.remove('nav-items-shown');
+  navItems.style.left = '110px';
+
+  setTimeout(function () {
+    hamburger.style.display = 'block';
+  }, 500);
+}
+
+function flipVertically(element, start, end, ms) {
+  var current = start;
+  var direction = start <= end ? 10 : -10;
+
+  var tick = setInterval(function () {
+    if (current === end) {
+      clearInterval(tick);
+    } else {
+      current += direction;
+      element.style.transform = 'rotateX(' + current + 'deg)';
+    }
+  }, ms / (Math.abs(start - end) / 10));
+}
+
+function toggleSkillInfo() {
+  var skillItem = document.getElementById(this.dataset.target + '-text');
+  var opacity = skillItem.style.opacity;
+  var selectorArrow = document.getElementById(this.dataset.target + '-arrow');
+
+  if (opacity === '1') {
+    skillItem.style.height = '0px';
+    window.setTimeout(function () {
+      skillItem.style.opacity = '0';
+    }, 600);
+
+    flipVertically(selectorArrow, 180, 0, 250);
+
+  } else {
+    skillItem.style.height = skillItem.scrollHeight + 'px';
+    skillItem.style.opacity = '1';
+
+    flipVertically(selectorArrow, 0, 180, 250);
+  }
+}
+
+function hideTechInfo(techItem) {
+  techItem.style.height = '0px';
+  techItem.style.display = 'none';
+}
+
+function showTechInfo(techItem) {
+  techItem.style.display = 'block';
+  window.setTimeout(function () {
+    techItem.style.height = techItem.scrollHeight + 'px';
+  }, 25);
+}
+
+function toggleTechInfo() {
+  var techItem = document.getElementById(this.dataset.target);
+  var display = techItem.style.display;
+
+  if (display != 'block') {
+    for (var i = 0; i < activeTechInfos.length; i++) {
+      var otherTechInfo = activeTechInfos.pop();
+      otherTechInfo = document.getElementById(otherTechInfo);
+
+      hideTechInfo(otherTechInfo);
+    }
+
+    showTechInfo(techItem);
+    activeTechInfos.push(this.dataset.target);
+  } else {
+    hideTechItem(techItem);
+    if (activeTechInfos.indexOf(this.dataset.target) > -1) {
+      var index = activeTechInfos.indexOf(this.dataset.target);
+      activeTechInfos.splice(index, 1);
+    }
+  }
+}
+
+function loadBlog(event) {
+  event.preventDefault();
+  window.location = this.dataset.location;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var path = window.location.pathname;
+  var active = '';
+
+  switch (path) {
+    case '/posts':
+      active = 'nav-blog';
+      break;
+    case '/projects':
+      active = 'nav-projects';
+      break;
+    case '/':
+      active = 'nav-home';
+      break;
+    default:
+      active = 'nav-blog';
   }
 
-  var pickers = document.getElementsByClassName('colour-choice');
+  var activeNav = document.getElementById(active);
+  activeNav.classList.add('nav-item-active');
 
-  for (var i = 0; i < pickers.length; i++) {
-    var item = pickers.item(i);
+  var skillItems = document.getElementsByClassName('field-image');
 
-    item.onclick = changeThemeColour;
-    if (currColour && currColour === item.dataset.colour)
-      item.classList.add('active');
+  for (var i = 0; i < skillItems.length; i++) {
+    var skillItem = skillItems.item(i);
+
+    skillItem.addEventListener('click', toggleSkillInfo);
   }
 
-  changeColourText(currColour);
-}
+  var techIcons = document.getElementsByClassName('tech-icon');
 
-function colorHeader() {
-  var h2 = this.getElementsByTagName('h2').item(0);
-  h2.classList.add('hovered');
-}
+  for (var i = 0; i < techIcons.length; i++) {
+    var techIcon = techIcons.item(i);
 
-function revertHeader() {
-  var h2 = this.getElementsByTagName('h2').item(0);
-  h2.classList.remove('hovered');
-}
-
-function changeColourText(colour) {
-  // Changes the flavour text to match the selected colour theme.
-  var items = document.getElementsByClassName('colour-text');
-
-  for (var i = 0; i < items.length; i++) {
-    var item = items.item(i);
-    item.textContent = item.dataset[colour];
-  }
-}
-
-function changeColour(colour) {
-  var root = document.getElementById('root');
-
-  if (root.classList.length > 0)
-    root.classList.replace(root.classList.item(0), colour);
-  else
-    root.classList.add(colour);
-
-  changeColourText(colour);
-}
-
-function changeThemeColour() {
-  var themeColour = this.dataset.colour;
-
-  changeColour(themeColour);
-
-  var otherColours = document.getElementsByClassName('colour-choice');
-  for (var i = 0; i < otherColours.length; i++) {
-    var item = otherColours.item(i);
-    if (item.classList.contains('active'))
-      item.classList.remove('active');
-
-    if (item.dataset.colour === themeColour)
-      item.classList.add('active');
+    techIcon.addEventListener('click', toggleTechInfo);
   }
 
-  // Store selection in localStorage
-  localStorage.setItem('colour', themeColour);
-}
+  var blogItems = document.getElementsByClassName('blog-list-item-linked');
+
+  for (var i = 0; i < blogItems.length; i++) {
+    var blogItem = blogItems.item(i);
+
+    blogItem.addEventListener('click', loadBlog);
+  }
+});

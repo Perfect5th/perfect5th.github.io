@@ -1,3 +1,18 @@
 <header>
-  <h1>{{site.title|escape}}</h1>
+  <div class="header-wrap">
+    <div class="header-left">
+      <h1>{{site.title|escape|upcase}}</h1>
+    </div>
+    <div class="header-right">
+      <p>Web Design and Development</p>
+    </div>
+
+    <nav class="desktop-nav">
+      <div class="nav-item-wrap">
+        <a href="/"><div id="nav-home" class="nav-item"><p>Home</p></div></a>
+        <a href="/posts"><div id="nav-blog" class="nav-item"><p>Blog</p></div></a>
+        <a href="/projects"><div id="nav-projects" class="nav-item"><p>Projects</p></div></a>
+      </div>
+    </nav>
+  </div>
 </header>

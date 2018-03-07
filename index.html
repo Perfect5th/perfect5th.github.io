@@ -2,49 +2,67 @@
 layout: default
 ---
 
-<nav class="subnav">
-  <ul>
+<nav class="mobile-nav">
+  <div class="hamburger" id="hamburger"><span onclick=showNav()>&#9776;</span></div>
+  <ul class="nav-items" id="nav-items">
+    <li class="first-nav" id="close-nav" onclick=closeNav()>></li>
+    <li class="first-nav first-nav-desktop"></li>
     <a href="/"><li class="active">Home</li></a>
     <a href="/posts"><li>Blog</li></a>
-    <a href="/projects"><li>Projects</li></a>
+    <a href="/projects"><li class="last-nav">Projects</li></a>
   </ul>
 </nav>
 
-<aside class="sidenav">
-  <nav>
-    <ul>
-      <a href="/"><li class="active">Home</li></a>
-      <a href="/posts"><li>Blog</li></a>
-      <a href="/projects"><li>Projects</li></a>
-    </ul>
-  </nav>
-</aside>
+<article class="introduction">
+  <div class="introduction-image">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 523.072 234.571" height="250.209" width="557.944">
+          <defs>
+              <linearGradient id="b">
+                  <stop offset="0" stop-color="#1d1d1d"/>
+                  <stop offset="1" stop-color="#1d1d1d" stop-opacity=".903"/>
+              </linearGradient>
+              <linearGradient id="a">
+                  <stop offset="0" stop-color="#1a1a1a" stop-opacity=".757"/>
+                  <stop offset="1" stop-color="#1a1a1a"/>
+              </linearGradient>
+              <filter height="1.248" y="-.124" width="1.13" x="-.065" id="d" color-interpolation-filters="sRGB">
+                  <feGaussianBlur stdDeviation=".226"/>
+              </filter>
+              <linearGradient gradientUnits="userSpaceOnUse" y2="451.618" x2="565.661" y1="451.618" x1="490.67" id="e" xlink:href="#a"/>
+              <linearGradient gradientUnits="userSpaceOnUse" y2="477.097" x2="414.28" y1="287.945" x1="122.163" id="c" xlink:href="#b"/>
+          </defs>
+          <g transform="translate(-68.071 -268.29)">
+              <path d="M565.441 423.744c11.11 0 22.053-.806 22.053 26.87 0 27.177-10.944 26.87-22.053 26.87" opacity=".903" fill="none" stroke="#1e1e1e" stroke-width="7.3"/>
+              <rect ry="3.571" y="278.791" x="113.571" height="203.571" width="310.714" fill="url(#c)" stroke="#6d2b15" stroke-width="21"/>
+              <path d="M68.686 482.778h400.485c.031 0 .056.025.056.056v12.925c0 3.915-5.195 6.545-10.486 6.545H76.315c-2.86 0-7.685-1.697-7.685-6.556v-12.914c0-.031.025-.056.056-.056z" fill="#b24523" stroke="#b24523" stroke-width="1.116"/>
+              <rect ry="2.188" y="490.362" x="85.625" height="4.375" width="8.375" fill="#7ef694" stroke="#b24523" filter="url(#d)"/>
+              <path d="M490.68 401.01h74.97c.007 0 .011.131.011.293v85.117c0 16.005-13.656 15.805-14.646 15.805h-44.532c-.535 0-15.813.395-15.813-15.865v-85.057c0-.162.005-.292.01-.292z" fill="url(#e)"/>
+              <path class="tea-steam" d="M528.165 391.612c18.886-12.935 22.728-21.527 0-34.25-22.727-12.722-18.323-21.924 0-34.25" fill="none" stroke="#7d7d7d" stroke-width="6" stroke-dasharray="15% 85%" stroke-dashoffset="100%"/>
+          </g>
+      </svg>
+    </div>
+  </div>
 
-<article>
-  <h2>Web Design and Development &ndash;
-  <span class="colour-text"
-    data-vert="Minty Fresh"
-    data-rouge="Hot Fire"
-    data-bleu="Cool as Ice"
-    data-orange="with Citrus Zest">
-    Minty Fresh
-  </span></h2>
-  <p>Hello! My name is Mitch Burton, and I make things on and for the web.</p>
-  <p>
-    This site is a place where I can experiment, blog, and occasionally break things.
-    My number one favourite thing to do is challenge myself to learn new things,
-    so if you have an interesting project in mind,
-    <em>please let me know about it</em>.
-  </p>
-  <p>
-    If something on here looks like hot garbage, or you just want to ask me
-    something that won&rsquo;t irreparably damage my self-esteem, you can contact
-    me at <a class="external" href="mailto:mitch@mitchellburton.ca">mitch@mitchellburton.ca</a>.
-  </p>
-  <p>
-    Feel free to sign me up for as many spam mailing lists as you like, I can
-    take it. If you like the design of the site, let me know!
-  </p>
+  <div class="introduction-text">
+    <h2>Hello!</h2>
+    <p>My name is Mitch Burton, and I make things on and for the web.</p>
+    <p>
+      This site is a place where I can experiment, blog, and occasionally break things.
+      My number one favourite thing to do is challenge myself to learn new things,
+      so if you have an interesting project in mind,
+      <em>please let me know about it</em>.
+    </p>
+    <p>
+      If something on here looks like hot garbage, or you just want to ask me
+      something that won&rsquo;t irreparably damage my self-esteem, you can contact
+      me at <a class="external" href="mailto:mitch@mitchellburton.ca">mitch@mitchellburton.ca</a>.
+    </p>
+    <p>
+      Feel free to sign me up for as many spam mailing lists as you like, I can
+      take it. If you like the design of the site, let me know!
+    </p>
+  </div>
 </article>
 
 <article>
@@ -54,46 +72,126 @@ layout: default
     bit more detail what I do.
   </p>
 
-  <h3>Web Apps</h3>
-  <p>
-    My current full-time job is as a web app developer! I make stuff that does
-    stuff. Neat stuff! Trust me!
-  </p>
-  <p>
-    I&rsquo;m a full-stack web developer at Biolux Research, Ltd. in Vancouver,
-    BC. This includes developing and maintaining a web portal, REST API, and
-    online store as part of a small team. Being on a small team is great, as it
-    lets me experiment with new technologies, and come up with creative
-    solutions &ndash; turning my own and others&rsquo; ideas into reality.
-  </p>
+  <div class="fields-infos">
+    <div class="field-info field-apps">
+      <h3>Web Apps</h3>
+      <div id="field-apps-image" class="field-image" data-target="field-apps">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1001.388" width="1380.417" viewBox="0 0 1380.4172 1001.3879">
+            <g transform="translate(-109.791 -152.047)">
+                <rect ry="10" y="154.547" x="112.542" height="895.63" width="1374.916" fill="#fff"/>
+                <path fill="#57b4e6" d="M112.632 221.512H1489.47v79.802H112.632z"/>
+                <path fill="#debfbb" d="M113.819 156.584h1372.716v63.409H113.819z"/>
+                <path d="M110.714 220.362h1378.523" fill="none" stroke="#7f2f21" stroke-width="4.647"/>
+                <path d="M132.49 178.032a14.722 14.722 0 0 1 20.55-3.325 14.722 14.722 0 0 1 3.332 20.55 14.722 14.722 0 0 1-20.548 3.337 14.722 14.722 0 0 1-3.344-20.547" fill="#ff5237" stroke="#7f2f21" stroke-width="4.122"/>
+                <path d="M179.633 178.033a14.722 14.722 0 0 1 20.55-3.325 14.722 14.722 0 0 1 3.332 20.549 14.722 14.722 0 0 1-20.548 3.337 14.722 14.722 0 0 1-3.344-20.547" fill="#ffcb37" stroke="#7f2f21" stroke-width="4.122"/>
+                <path d="M226.775 178.033a14.722 14.722 0 0 1 20.55-3.325 14.722 14.722 0 0 1 3.331 20.549 14.722 14.722 0 0 1-20.548 3.337 14.722 14.722 0 0 1-3.343-20.547" fill="#96ff3e" stroke="#7f2f21" stroke-width="4.122"/>
+                <path fill="#fbf6f5" stroke="#7f2f21" stroke-width="4.963" d="M425.72 166.44h748.56v41.958H425.72z"/>
+                <path fill="#57b4e6" d="M1161.883 276.565h284.863v67.68h-284.863z"/>
+                <path fill="none" stroke="#ececec" stroke-width="8" d="M247.551 402.834h333.35v333.35h-333.35zM633.325 402.834h333.35v333.35h-333.35zM1020.285 404.02h330.979v564.324h-330.979z"/>
+                <path d="M319.209 500.935a117.178 117.178 0 0 1 163.562-26.463 117.178 117.178 0 0 1 26.513 163.554 117.178 117.178 0 0 1-163.546 26.562 117.178 117.178 0 0 1-26.612-163.538M704.983 500.935a117.178 117.178 0 0 1 163.562-26.464 117.178 117.178 0 0 1 26.513 163.555 117.178 117.178 0 0 1-163.546 26.562 117.178 117.178 0 0 1-26.611-163.538" fill="none" stroke="#ececec" stroke-width="30"/>
+                <path d="M413.123 452.337a117.178 117.178 0 0 1 113.282 83.312 117.178 117.178 0 0 1-48.27 132.075 117.178 117.178 0 0 1-140.306-9.366 117.178 117.178 0 0 1-30.287-137.318" fill="none" stroke="#57b4e6" stroke-width="30"/>
+                <path d="M797.821 452.352a117.178 117.178 0 0 1 87.443 36.78 117.178 117.178 0 0 1 31.561 89.458" fill="none" stroke="#ff5237" stroke-width="30"/>
+                <path fill="#57b4e6" d="M1043.343 448.504h284.863v27.274h-284.863z"/>
+                <path fill="#ececec" d="M1043.343 507.182h284.863v27.274h-284.863z"/>
+                <path fill="#57b4e6" d="M1043.343 507.182h178.797v27.274h-178.797z"/>
+                <path d="M1053.39 652.874a38.305 38.305 0 0 1 53.469-8.65 38.305 38.305 0 0 1 8.667 53.465 38.305 38.305 0 0 1-53.464 8.683 38.305 38.305 0 0 1-8.699-53.46M1053.39 764.9a38.305 38.305 0 0 1 53.469-8.651 38.305 38.305 0 0 1 8.667 53.466 38.305 38.305 0 0 1-53.464 8.683 38.305 38.305 0 0 1-8.699-53.461M1053.39 876.057a38.305 38.305 0 0 1 53.469-8.651 38.305 38.305 0 0 1 8.667 53.466 38.305 38.305 0 0 1-53.464 8.683 38.305 38.305 0 0 1-8.699-53.46" fill="none" stroke="green" stroke-width="5.632"/>
+                <path fill="none" stroke="#ececec" stroke-width="8" d="M247.256 788.377h718.042v180.218H247.256z"/>
+                <path fill="#ececec" d="M1149.298 661.654h164.655v27.274h-164.655zM1149.298 773.679h164.655v27.274h-164.655zM1149.298 884.837h164.655v27.274h-164.655zM281.958 820.154h164.655v27.274H281.958zM281.958 874.439h641.083v27.274H281.958z"/>
+                <rect ry="10.004" y="154.369" x="112.113" height="895.987" width="1375.774" fill="none" stroke="#7f2f21" stroke-width="4.644"/>
+            </g>
+            <path id="field-apps-arrow" class="field-arrow" d="M640.226 953.945l49.983 37.447 49.982-37.447" fill="none" stroke="#7f2f21" stroke-width="16"/>
+        </svg>
+      </div>
+      <div id="field-apps-text" class="field-text">
+        <p>
+          My current full-time job is as a web app developer! I make stuff that does
+          stuff. Neat stuff! Trust me!
+        </p>
+        <p>
+          I&rsquo;m a full-stack web developer at Biolux Research, Ltd. in Vancouver,
+          BC. This includes developing and maintaining a web portal, REST API, and
+          online store as part of a small team. Being on a small team is great, as it
+          lets me experiment with new technologies, and come up with creative
+          solutions &ndash; turning my own and others&rsquo; ideas into reality.
+        </p>
+      </div>
+    </div>
 
-  <h3>Web Design</h3>
-  <p>Design is a newer passion of mine, but I&rsquo;m diving right into it!</p>
-  <p>
-    As a member of a (very) small development team, having strong design skills
-    is an absolute must. While I&rsquo;ll admit that I am not the most
-    experienced designer, I pride myself on a nearly fanatical attention to
-    detail. I value clean, intuitive design, with an emphasis on consistency and
-    reusability of components. Also, I <em>really</em> like
-    <span class="colour-text"
-      data-vert="green"
-      data-rouge="red"
-      data-bleu="blue"
-      data-orange="orange">
-      green
-    </span>.
-  </p>
+    <div class="field-info field-design">
+      <h3>Web Design</h3>
+      <div id="field-design-image" class="field-image" data-target="field-design">
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1380.417" height="1001.388" viewBox="0 0 1380.4172 1001.3879">
+          <defs>
+            <linearGradient id="linearGradient4833">
+              <stop offset="0" stop-color="#1d1d1d" />
+              <stop offset="1" stop-color="#404040" />
+            </linearGradient>
+            <filter id="e" x="-.065" width="1.13" y="-.124" height="1.248" color-interpolation-filters="sRGB">
+                <feGaussianBlur stdDeviation=".226"/>
+            </filter>
+            <linearGradient xlink:href="#linearGradient4742" id="linearGradient4748-3" x1="122.16331" y1="287.9455" x2="414.2796" y2="477.09656" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.7538248,0,0,1.7538248,-14.053708,-361.08067)" />
+            <linearGradient gradientTransform="translate(-69.651543,0)" gradientUnits="userSpaceOnUse" y2="677.43372" x2="1035.9509" y1="130.96234" x1="189.56451" id="linearGradient4823" xlink:href="#linearGradient4833" />
+            <linearGradient gradientTransform="translate(-69.651543,0)" gradientUnits="userSpaceOnUse" y2="766.47473" x2="1191.639" y1="430.72171" x1="660.01111" id="linearGradient4831" xlink:href="#linearGradient4833" />
+            <linearGradient gradientUnits="userSpaceOnUse" y2="677.43372" x2="1035.9509" y1="130.96234" x1="189.56451" id="linearGradient4823-3" xlink:href="#linearGradient4833" gradientTransform="matrix(0.14335267,0,0,0.36279653,149.975,563.53689)" />
+            <linearGradient gradientUnits="userSpaceOnUse" y2="677.43372" x2="1035.9509" y1="130.96234" x1="189.56451" id="linearGradient4823-9" xlink:href="#linearGradient4833" gradientTransform="matrix(0.2663767,0,0,0.62009288,1002.116,384.93138)" />
+          </defs>
+          <path id="rect4845" d="m 358.09297,636.93304 357.33258,0 c -49.50781,62.21359 -46.09422,119.76364 0,173.55258 l -357.33258,0 c 38.93308,-52.36236 54.44931,-108.02586 0,-173.55258 z" style="opacity:1;fill:#592115;fill-opacity:1;stroke:none;stroke-width:16;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+          <rect style="fill:url(#linearGradient4823);fill-opacity:1.0;stroke:#6d2b15;stroke-width:36.83032227;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="rect4136-5" width="842.56024" height="552.02228" x="115.47914" y="127.86954" ry="6.26366" />
+          <path id="field-design-arrow" class="field-arrow" d="m 640.2265,953.94477 49.98213,37.44694 49.98214,-37.44694" style="fill:none;fill-rule:evenodd;stroke:#7f2f21;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+          <rect style="fill:url(#linearGradient4831);fill-opacity:1;stroke:#6d2b15;stroke-width:36.83032227;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="rect4136" width="544.93848" height="357.02863" x="582.11755" y="422.30533" ry="6.26366" />
+          <path style="fill:#b24523;fill-opacity:1;stroke:#b24523;stroke-width:1.95814216;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 562.04807,780.06244 702.38043,0 c 0.055,0 0.099,0.0442 0.099,0.0989 l 0,22.66864 c 0,6.86581 -9.1127,11.47823 -18.391,11.47823 l -670.70858,0 c -5.01484,0 -13.47869,-2.97638 -13.47869,-11.49878 l 0,-22.64809 c 0,-0.0547 0.0442,-0.0989 0.0989,-0.0989 z" id="rect4138" />
+          <rect transform="matrix(1.7538248,0,0,1.7538248,418.93315,-600.41584)" style="fill:#7ef694;fill-opacity:1;stroke:#b24523;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4711)" id="rect4144" width="8.375" height="4.375" x="98.540504" y="794.70898" ry="2.1875" />
+          <rect style="fill:url(#linearGradient4823-3);fill-opacity:1.0;stroke:#6d2b15;stroke-width:8.39923954;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="rect4136-5-2" width="120.78325" height="200.27177" x="176.51393" y="609.92755" ry="2.2724342" />
+          <rect style="fill:url(#linearGradient4823-9);fill-opacity:1.0;stroke:#6d2b15;stroke-width:14.96862888;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="rect4136-5-7" width="224.43842" height="342.30508" x="1051.4305" y="464.22235" ry="3.8840511" />
+          <rect y="609.81311" x="179.06972" height="20.420233" width="115.56505" id="rect4912" style="opacity:1;fill:#6d2b15;fill-opacity:1;stroke:none;stroke-width:16;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+          <rect y="787.87305" x="178.28433" height="20.420233" width="115.56505" id="rect4912-0" style="opacity:1;fill:#6d2b15;fill-opacity:1;stroke:none;stroke-width:16;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+          <rect ry="1.1219974" y="615.19867" x="213.85144" height="2.4683928" width="43.53323" id="rect4929" style="opacity:1;fill:#262626;fill-opacity:1;stroke:none;stroke-width:16;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        </svg>
+      </div>
+      <div id="field-design-text" class="field-text">
+        <p>Design is a newer passion of mine, but I&rsquo;m diving right into it!</p>
+        <p>
+          As a member of a (very) small development team, having strong design skills
+          is an absolute must. While I&rsquo;ll admit that I am not the most
+          experienced designer, I pride myself on a nearly fanatical attention to
+          detail. I value clean, intuitive design, with an emphasis on consistency and
+          reusability of components.
+          </span>.
+        </p>
+      </div>
+    </div>
 
-  <h3>Data Analysis</h3>
-  <p>Learning things requires data, and data is one of the things I do best!</p>
-  <p>
-    With my background in biochemistry, I started my career in a
-    research-oriented role. I have a high-level working knowledge of statistical
-    analysis, which I do <em>not</em> hesitate to bore people with. Give me a
-    big, fat dataset and throw me in a quiet room &ndash; I can&rsquo;t promise
-    you&rsquo;ll get the results you want, but statistically-supported
-    conclusions are a thing of beauty.
-  </p>
+    <div class="field-info field-analysis">
+      <h3>Data Analysis</h3>
+      <div id="field-analysis-image" class="field-image" data-target="field-analysis">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1380.417" height="1001.388" viewBox="0 0 1380.4172 1001.3879">
+            <rect ry="3.884" y="566.953" x="944.267" height="229.784" width="57.446" fill="#57b4e6"/>
+            <rect ry="3.08" y="614.525" x="1022.358" height="182.211" width="57.446" fill="#b24523"/>
+            <rect ry="5.811" y="454.305" x="1100.244" height="343.778" width="57.446" fill="green"/>
+            <path d="M407.266 59.813v799.755" fill="none" stroke="#ac9e9c" stroke-width="10" stroke-dasharray="40,40" stroke-dashoffset="94"/>
+            <path d="M659.764 700.226v98.377h85.684c-43.19-32.792-63.847-65.585-85.684-98.377zM173.271 699.274v98.377H87.588c43.19-32.792 63.847-65.585 85.683-98.377z" fill="#c7f4c7" fill-rule="evenodd"/>
+            <path id="field-analysis-arrow" class="field-arrow" d="M640.226 953.945l49.983 37.447 49.982-37.447" fill="none" stroke="#7f2f21" stroke-width="16"/>
+            <path d="M80.783 59.813v799.755M21.542 800.327H1334.72" fill="none" stroke="#6d2b15" stroke-width="10"/>
+            <path d="M993.635 847.9s-161.683 3.02-244.145-46.675C552.888 682.743 610.098 182.783 408.405 182.783c-201.694 0-138.465 529.895-328.783 617.975l-52.245 22.458" fill="none" stroke="green" stroke-width="10"/>
+            <circle r="205.998" cy="272.486" cx="931.252" fill="#b24523"/>
+            <path d="M866.135 77.117a205.998 205.998 0 0 1 253.81 112.5l-188.581 82.898z" fill="green"/>
+            <path d="M1079.647 129.608a205.998 205.998 0 0 1 41.964 64.147l-190.359 78.73z" fill="#57b4e6"/>
+        </svg>
+      </div>
+      <div id="field-analysis-text" class="field-text">
+        <p>Learning things requires data, and data is one of the things I do best!</p>
+        <p>
+          With my background in biochemistry, I started my career in a
+          research-oriented role. I have a high-level working knowledge of statistical
+          analysis, which I do <em>not</em> hesitate to bore people with. Give me a
+          big, fat dataset and throw me in a quiet room &ndash; I can&rsquo;t promise
+          you&rsquo;ll get the results you want, but statistically-supported
+          conclusions are a thing of beauty.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <h3>Technologies I &lt;3</h3>
   <p>
@@ -101,58 +199,145 @@ layout: default
     <em>should</em> be constantly expanding. Otherwise, I&rsquo;m probably dead
     &ndash; someone tell my family!
   </p>
-  <dl>
-    <dt>Python</dt>
-    <dd>
-      Python is the language that I work in most frequently, as it&rsquo;s the
-      main one I use at my day job! I&rsquo;ve listed it first here because
-      it&rsquo;s certainly my top competency. I use it for back-end development,
-      (mainly Django) statistics, and automating boring tasks &ndash; sorry,
-      <em>optimizations</em>.
-    </dd>
 
-    <dt>JavaScript</dt>
-    <dd>
-      JS is where it&rsquo;s at right now, and I get the hype. I love JavaScript
-      most when I want to make something quick, like a prototype or a bot that
-      automatically responds &ldquo;lol&rdquo; on Slack. I slay with Node in the
-      back-end and perform feats of derring-do with React (or Preact!) in the
-      front. I also know jQuery, but I wasn&rsquo;t going to mention that
-      because I&rsquo;m sure you don&rsquo;t care!
-    </dd>
+  <div class="techs">
+    <div class="tech-icons">
+      <div class="tech-icon" data-target="tech-python">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+            <g transform="translate(0 -1004.362)">
+                <path d="M23.999 1037.376H41.13c1.78 0 1.78-18.028 0-18.028h-7.347c0 9.014 0 9.014-9.785 9.014-9.786 0-9.786 0-9.786 9.014v7.01c0 3.005 20.46 3.005 20.46 0v-7.01" fill="#ffde57" fill-rule="evenodd" stroke="#000" stroke-width=".944"/>
+                <circle r="1.5" cy="1041.862" cx="31.5" fill="#f6edcf"/>
+                <path d="M23.939 1019.282H6.806c-1.779 0-1.779 18.028 0 18.028h7.347c0-9.014 0-9.014 9.786-9.014 9.785 0 9.785 0 9.785-9.014v-7.01c0-3.005-20.46-3.005-20.46 0v7.01" fill="#326c9c" fill-rule="evenodd" stroke="#000" stroke-width=".944"/>
+                <circle transform="scale(-1)" r="1.5" cy="-1014.796" cx="-16.437" fill="#f6edcf"/>
+            </g>
+        </svg>
+      </div>
+      <div class="tech-icon" data-target="tech-js">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48">
+            <g transform="translate(0 -1004.362)">
+                <circle r="1.5" cy="1041.862" cx="31.5" fill="#fff"/>
+                <circle transform="scale(-1)" r="1.5" cy="-1014.796" cx="-16.437" fill="#fff"/>
+                <circle r="19" cy="1028.362" cx="24" fill="#b24523"/>
+                <path d="M10 1032.362c0 8 11 8 11 0v-11.92" fill="none" stroke="#f6edcf" stroke-width="2.5"/>
+                <path style="line-height:120.00000477%" d="M36.216 1017.29v2.375q-1.386-.663-2.616-.989-1.23-.325-2.375-.325-1.99 0-3.075.771-1.073.772-1.073 2.195 0 1.193.711 1.808.724.603 2.725.977l1.471.301q2.725.519 4.015 1.833 1.303 1.302 1.303 3.497 0 2.616-1.76 3.967-1.75 1.35-5.137 1.35-1.278 0-2.725-.29-1.435-.289-2.978-.855v-2.508q1.483.832 2.905 1.254 1.423.422 2.798.422 2.086 0 3.22-.82 1.133-.82 1.133-2.34 0-1.326-.82-2.073-.808-.748-2.665-1.122l-1.483-.289q-2.725-.543-3.943-1.7-1.218-1.158-1.218-3.22 0-2.387 1.676-3.761 1.688-1.375 4.642-1.375 1.266 0 2.58.23 1.315.228 2.69.687z" font-size="24.693" font-weight="400" font-family="sans-serif" letter-spacing="0" word-spacing="0" fill="#f6edcf"/>
+            </g>
+        </svg>
+      </div>
+      <div class="tech-icon" data-target="tech-r">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <g transform="translate(0 -1004.362)">
+                <ellipse cx="24" cy="1025.706" rx="22.344" ry="15.259" fill="#b24523"/>
+                <ellipse cx="25.897" cy="1026.42" rx="18.348" ry="12.241" fill="#f4e9c4"/>
+                <g style="line-height:125%">
+                    <path d="M29.931 1029.369c1.576 0 2.702-.279 3.38-.836.69-.557 1.034-.804 1.034-2.08 0-1.262-.345-1.363-1.035-1.908-.677-.545-1.803-.817-3.379-.817h-3.164v5.64zm-3.164 6.414v10.494h-7.52v-27.731h11.485c3.841 0 6.654.613 8.438 1.839 1.797 1.226 2.695 3.163 2.695 5.813 0 1.833-.469 3.338-1.406 4.514-.925 1.176-3.262 2.311-5.137 2.868 1.029.223 2.706.775 3.513 1.568.82.78 1.826 1.656 2.659 3.254l4.082 7.875h-8.008l-3.555-6.89c-.716-1.388-1.445-2.335-2.187-2.843-.73-.507-1.706-.761-2.93-.761z" style="-inkscape-font-specification:'sans-serif Bold'" font-weight="700" fill="green" font-size="39.008" font-family="sans-serif" letter-spacing="0" word-spacing="0"/>
+                </g>
+            </g>
+        </svg>
+      </div>
+      <div class="tech-icon" data-target="tech-sql">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <g transform="translate(0 -1004.362)">
+                <circle cx="24" cy="1028.362" r="19" fill="#326c9c"/>
+                <path d="M16.558 1020.573v1.905q-1.112-.532-2.098-.793-.987-.26-1.906-.26-1.596 0-2.466.618-.861.62-.861 1.76 0 .958.57 1.452.58.483 2.186.783l1.18.242q2.186.416 3.221 1.47 1.045 1.045 1.045 2.805 0 2.099-1.412 3.182-1.403 1.084-4.12 1.084-1.026 0-2.187-.233-1.15-.232-2.389-.686v-2.012q1.19.667 2.331 1.006 1.142.338 2.244.338 1.674 0 2.583-.657.91-.658.91-1.877 0-1.064-.659-1.664-.648-.6-2.137-.9l-1.19-.231q-2.186-.436-3.163-1.364-.977-.929-.977-2.583 0-1.915 1.345-3.017 1.354-1.103 3.724-1.103 1.015 0 2.07.184 1.054.183 2.156.551z" style="line-height:120.00000477%" font-size="24.693" font-weight="400" font-family="sans-serif" letter-spacing="0" word-spacing="0" fill="#f4e9c4"/>
+                <g style="line-height:125%">
+                    <path d="M24.639 1021.405q-2.103 0-3.345 1.567-1.233 1.568-1.233 4.272 0 2.695 1.233 4.262 1.242 1.567 3.345 1.567 2.102 0 3.325-1.567 1.233-1.567 1.233-4.262 0-2.704-1.233-4.272-1.223-1.567-3.325-1.567zm2.704 12.7l2.542 2.782h-2.331l-2.112-2.284-.488.029q-.162.01-.315.01-3.01 0-4.817-2.007-1.796-2.017-1.796-5.39 0-3.383 1.796-5.39 1.807-2.016 4.817-2.016 3 0 4.797 2.016 1.797 2.007 1.797 5.39 0 2.485-1.004 4.252-.994 1.768-2.886 2.61z" font-weight="400" font-size="19.572" font-family="sans-serif" letter-spacing="0" word-spacing="0" fill="#f4e9c4"/>
+                </g>
+                <text y="1043.362" x="16.611" style="line-height:125%" font-weight="400" font-size="40" font-family="sans-serif" letter-spacing="0" word-spacing="0"/>
+                <g style="line-height:125%">
+                    <path d="M32.154 1019.838h1.93v12.643h6.948v1.625h-8.878v-14.268z" font-weight="400" font-size="19.572" font-family="sans-serif" letter-spacing="0" word-spacing="0" fill="#f4e9c4"/>
+                </g>
+            </g>
+        </svg>
+      </div>
+      <div class="tech-icon" data-target="tech-htmlcss">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <g transform="translate(0 -1004.362)">
+                <circle cx="24" cy="1028.362" r="19" fill="green"/>
+                <g fill="#f4e9c4">
+                    <path d="M21.314 1010.887l.872.872-2.641 2.641 3.168 3.168 2.64-2.641.873.871-6.444 6.444-.872-.872 3.069-3.068-3.168-3.168-3.069 3.068-.871-.871 6.443-6.444zM26.452 1016.025l5.451 5.45-.734.734-2.287-2.287-5.71 5.71-.876-.876 5.71-5.71-2.288-2.288.734-.733zM32.134 1021.706l1.299 1.3-2.74 6.029 6.037-2.732 1.3 1.299-6.444 6.443-.85-.85 5.657-5.658-6.08 2.758-.877-.876 2.758-6.081-5.658 5.658-.846-.846 6.444-6.444zM39.149 1028.722l.872.871-5.71 5.71 3.137 3.138-.733.734-4.01-4.01 6.444-6.443z"/>
+                </g>
+                <g fill="#f4e9c4">
+                    <path d="M20.324 1027.965l-.919.919q-.03-.85-.328-1.554-.294-.699-.855-1.26-1.104-1.105-2.369-1.014-1.26.086-2.538 1.364-1.273 1.273-1.364 2.537-.086 1.26 1.019 2.366.561.56 1.26.854.704.298 1.554.328l-.91.91q-.769-.146-1.438-.504-.664-.354-1.234-.924-1.463-1.463-1.411-3.198.056-1.74 1.605-3.289 1.554-1.553 3.289-1.605 1.739-.056 3.202 1.407.578.578.932 1.243.363.664.505 1.42zM25.212 1032.283l-.85.85q-.26-.734-.583-1.29-.324-.557-.734-.967-.712-.712-1.377-.825-.66-.108-1.17.402-.426.427-.392.902.043.474.626 1.325l.419.634q.79 1.161.78 2.093 0 .933-.785 1.718-.936.937-2.05.79-1.109-.143-2.322-1.355-.457-.458-.872-1.08-.41-.617-.76-1.372l.899-.897q.233.828.59 1.488.359.66.851 1.153.747.746 1.446.859.699.112 1.243-.432.475-.475.449-1.036-.022-.557-.553-1.355l-.427-.634q-.781-1.17-.803-2.02-.021-.85.717-1.588.854-.855 1.946-.747 1.096.112 2.154 1.17.453.453.841 1.005.389.553.717 1.209zM30.207 1037.278l-.85.85q-.26-.733-.583-1.29-.323-.557-.733-.967-.713-.712-1.377-.824-.66-.108-1.17.401-.427.427-.393.902.044.475.626 1.325l.419.634q.79 1.161.781 2.094 0 .932-.785 1.717-.937.937-2.05.79-1.11-.142-2.322-1.355-.458-.458-.872-1.079-.41-.617-.76-1.372l.898-.898q.233.829.591 1.489.358.66.85 1.152.747.747 1.446.859.7.112 1.243-.432.475-.474.45-1.035-.023-.557-.553-1.356l-.428-.634q-.78-1.17-.802-2.02-.022-.85.716-1.588.855-.855 1.946-.747 1.097.113 2.154 1.17.453.453.842 1.006.388.552.716 1.208z"/>
+                </g>
+            </g>
+        </svg>
+      </div>
+      <div class="tech-icon" data-target="tech-other">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+            <g transform="translate(0 -1004.362)">
+                <circle cx="24" cy="1028.362" r="19" fill="#57b4e6"/>
+                <path d="M21.7 1035.894h3.022v3.78H21.7v-3.78zm2.933-2.188H21.79v-2.292q0-1.504.416-2.471.417-.968 1.757-2.248l1.34-1.325q.848-.788 1.22-1.488.387-.7.387-1.429 0-1.325-.982-2.143-.968-.82-2.575-.82-1.176 0-2.516.522-1.325.52-2.769 1.518v-2.798q1.4-.849 2.829-1.265 1.443-.417 2.976-.417 2.74 0 4.391 1.444 1.668 1.443 1.668 3.81 0 1.131-.536 2.158-.536 1.013-1.876 2.293l-1.31 1.28q-.7.7-.997 1.101-.283.387-.402.76-.09.312-.134.758-.044.447-.044 1.221v1.83z" fill="#f4e9c4" />
+            </g>
+        </svg>
+      </div>
+    </div>
+    <dl id="tech-initial" class="tech-info tech-info-initial">
+      <dt></dt>
+      <dd>Click one of the icons above to learn more about what I do with each.</dd>
+    </dl>
+    <dl id="tech-python" class="tech-info">
+      <dt>Python</dt>
+      <dd>
+        Python is the language that I work in most frequently, as it&rsquo;s the
+        main one I use at my day job! I&rsquo;ve listed it first here because
+        it&rsquo;s certainly my top competency. I use it for back-end development,
+        (mainly Django) statistics, and automating boring tasks &ndash; sorry,
+        <em>optimizations</em>.
+      </dd>
+    </dl>
 
-    <dt>R</dt>
-    <dd>
-      Although most of my stats work nowadays has moved to Python, I still have
-      a soft spot for R. When I need to do some quick hypothesis testing or gen
-      a sassy multilevel regression, I&rsquo;ll often dust off the ol&rsquo; R
-      shell.
-    </dd>
+    <dl id="tech-js" class="tech-info">
+      <dt>JavaScript</dt>
+      <dd>
+        JS is where it&rsquo;s at right now, and I get the hype. I love JavaScript
+        most when I want to make something quick, like a prototype or a bot that
+        automatically responds &ldquo;lol&rdquo; on Slack. I slay with Node in the
+        back-end and perform feats of derring-do with React (or Preact!) in the
+        front. I also know jQuery, but I wasn&rsquo;t going to mention that
+        because I&rsquo;m sure you don&rsquo;t care!
+      </dd>
+    </dl>
 
-    <dt>SQL</dt>
-    <dd>
-      I know enough SQL to avoid stabbing myself in the eye with a tricky
-      <code>JOIN</code> or subquery contstruct, but <em>please</em> don&rsquo;t
-      ask me to write your sprocs (at least, not yet). My preference is
-      PostGres, and I&rsquo;ll also use this space to mention that I&rsquo;ve
-      done some work with mongo, but I&rsquo;m a novice at best. Isn&rsquo;t
-      this honesty <em>refreshing?</em>
-    </dd>
+    <dl id="tech-r" class="tech-info">
+      <dt>R</dt>
+      <dd>
+        Although most of my stats work nowadays has moved to Python, I still have
+        a soft spot for R. When I need to do some quick hypothesis testing or gen
+        a sassy multilevel regression, I&rsquo;ll often dust off the ol&rsquo; R
+        shell.
+      </dd>
+    </dl>
 
-    <dt>HTML &amp; CSS</dt>
-    <dd>
-      I know both of these, yay! I&rsquo;m a fan of Sass, and will use literally
-      whatever template engine I can get my hands on.
-    </dd>
+    <dl id="tech-sql" class="tech-info">
+      <dt>SQL</dt>
+      <dd>
+        I know enough SQL to avoid stabbing myself in the eye with a tricky
+        <code>JOIN</code> or subquery contstruct, but <em>please</em> don&rsquo;t
+        ask me to write your sprocs (at least, not yet). My preference is
+        PostGres, and I&rsquo;ll also use this space to mention that I&rsquo;ve
+        done some work with mongo, but I&rsquo;m a novice at best. Isn&rsquo;t
+        this honesty <em>refreshing?</em>
+      </dd>
+    </dl>
 
-    <dt><em>Others?</em></dt>
-    <dd>
-      I&rsquo;m always working on learning something! Right now, those
-      somethings are <strong>C</strong>, <strong>Rust</strong>, and maybe
-      <strong>Go</strong>. If I feel I&rsquo;ve learned something well enough,
-      I&rsquo;ll move it up to the list above.
-    </dd>
-  </dl>
+    <dl id="tech-htmlcss" class="tech-info">
+      <dt>HTML &amp; CSS</dt>
+      <dd>
+        I know both of these, yay! I&rsquo;m a fan of Sass, and will use literally
+        whatever template engine I can get my hands on.
+      </dd>
+    </dl>
+
+    <dl id="tech-other" class="tech-info">
+      <dt><em>Others?</em></dt>
+      <dd>
+        I&rsquo;m always working on learning something! Right now, those
+        somethings are <strong>C</strong>, <strong>Rust</strong>, and maybe
+        <strong>Go</strong>. If I feel I&rsquo;ve learned something well enough,
+        I&rsquo;ll move it up to the list above.
+      </dd>
+    </dl>
+  </div>
 
   <p>Since you&rsquo;ve made it this far, let me let you in on a little secret:</p>
   <p><em>I love writing documentation.</em></p>

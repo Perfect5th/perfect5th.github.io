@@ -91,6 +91,11 @@ function toggleTechInfo() {
   }
 }
 
+function loadBlog(event) {
+  event.preventDefault();
+  window.location = this.dataset.location;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   var path = window.location.pathname;
   var active = '';
@@ -123,5 +128,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var techIcon = techIcons.item(i);
 
     techIcon.addEventListener('click', toggleTechInfo);
+  }
+
+  var blogItems = document.getElementsByClassName('blog-list-item');
+
+  for (var i = 0; i < blogItems.length; i++) {
+    var blogItem = blogItems.item(i);
+
+    blogItem.addEventListener('click', loadBlog);
   }
 });

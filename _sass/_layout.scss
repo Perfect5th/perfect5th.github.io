@@ -323,6 +323,34 @@ footer {
     display: none;
 }
 
+/* Blog selectors */
+.posts-wrapper {
+    margin: auto;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    width: 100%;
+
+    .posts {
+        display: flex;
+        flex-wrap: wrap;
+
+        .title-link {
+            text-decoration: none;
+        }
+
+        .blog-list-item {
+            cursor: pointer;
+            max-width: 500px;
+            width: 85%;
+
+            .blog-date {
+                font-style: italic;
+            }
+        }
+    }
+}
+
+
 @media (min-width: 980px) {
 
     header {
@@ -365,7 +393,8 @@ footer {
         .nav-item {
             background-color: fade-out($linen, 0.2);
             border-radius: 0.1rem 0.1rem 0 0;
-            font-family: 'Bitter', serif;
+            font-family: 'Lato', sans-serif;
+            font-variant: small-caps;
             height: 95%;
             margin-right: 1rem;
             padding: 1.4rem 1rem 1.2rem 1rem;

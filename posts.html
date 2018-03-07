@@ -3,23 +3,16 @@ title: Blog
 layout: default
 ---
 
-<nav class="subnav">
-  <ul>
-    <a href="/"><li>Home</li></a>
-    <a href="/posts"><li class="active">Blog</li></a>
-    <a href="/projects"><li>Projects</li></a>
+<nav class="mobile-nav">
+  <div class="hamburger" id="hamburger"><span onclick=showNav()>&#9776;</span></div>
+  <ul class="nav-items" id="nav-items">
+    <li class="first-nav" id="close-nav" onclick=closeNav()>></li>
+    <li class="first-nav first-nav-desktop"></li>
+    <a href="/"><li class="active">Home</li></a>
+    <a href="/posts"><li>Blog</li></a>
+    <a href="/projects"><li class="last-nav">Projects</li></a>
   </ul>
 </nav>
-
-<aside class="sidenav">
-  <nav>
-    <ul>
-      <a href="/"><li>Home</li></a>
-      <a href="/posts"><li class="active">Blog</li></a>
-      <a href="/projects"><li>Projects</li></a>
-    </ul>
-  </nav>
-</aside>
 
 <article class="blog-topper">
   <h2>Read My Rambles</h2>
@@ -31,18 +24,24 @@ layout: default
     If you&rsquo;re interested in reaching out to me, email me! I may one day
     add comments to this blog.
   </p>
+
+  <h2>Posts</h2>
 </article>
 
-{% for post in site.posts %}
-  <a href="{{ post.url }}" class="blog-link">
-    <article class="blog-list-item">
-      <div>
-        <h2>{{ post.title }}</h2>
-        <p class="blog-date">{{ post.date | date: "%b %-d, %Y" }}</p>
-        <div class="preview">
-          {{ post.content | truncatewords: 40 }} <a href="{{ post.url }}">Click for more</a>
+<div class="posts-wrapper">
+  <div class="posts">
+    {% for post in site.posts %}
+      <article class="blog-list-item" data-location="{{ post.url }}">
+        <div>
+          <a class="title-link" href="{{ post.url }}" class="blog-link">
+            <h2>{{ post.title }}</h2>
+          </a>
+          <p class="blog-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+          <div class="preview">
+            {{ post.content | truncatewords: 40 }} <a href="{{ post.url }}">Click for more</a>
+          </div>
         </div>
-      </div>
-    </article>
-  </a>
-{% endfor %}
+      </article>
+    {% endfor %}
+  </div>
+</div>

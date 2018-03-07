@@ -180,19 +180,21 @@ header {
 .tech-icons {
     background-color: darken($linen, 2.5%);
     border-radius: 0.5rem 0.5rem 0 0;
+    padding: 0.5rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 
     .tech-icon {
         cursor: pointer;
         height: 5rem;
+        margin-right: 0.5rem;
         width: 5rem;
 
         svg {
             width: 100%;
             height: auto;
         }
+
     }
 }
 

@@ -339,12 +339,37 @@ footer {
         }
 
         .blog-list-item {
-            cursor: pointer;
             max-width: 500px;
             width: 85%;
 
             .blog-date {
                 font-style: italic;
+            }
+        }
+
+        .blog-list-item-linked {
+            cursor: pointer;
+        }
+    }
+}
+
+.breadcrumbs {
+    margin: auto;
+    max-width: 1200px;
+    width: 85%;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+        padding: 0;
+
+        li {
+            list-style: none;
+            margin-top: 0.5rem;
+
+            .breadcrumb-separator {
+                margin: 0 1rem;
             }
         }
     }

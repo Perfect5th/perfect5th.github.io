@@ -8,11 +8,18 @@ layout: default
   <ul class="nav-items" id="nav-items">
     <li class="first-nav" id="close-nav" onclick=closeNav()>></li>
     <li class="first-nav first-nav-desktop"></li>
-    <a href="/"><li class="active">Home</li></a>
-    <a href="/posts"><li>Blog</li></a>
+    <a href="/"><li>Home</li></a>
+    <a href="/posts"><li class="active">Blog</li></a>
     <a href="/projects"><li class="last-nav">Projects</li></a>
   </ul>
 </nav>
+
+<div class="breadcrumbs">
+  <ul>
+    <li><a href="/">Home</a><span class="breadcrumb-separator">></span></li>
+    <li class="active">Blog</li>
+  </ul>
+</div>
 
 <article class="blog-topper">
   <h2>Read My Rambles</h2>
@@ -31,7 +38,7 @@ layout: default
 <div class="posts-wrapper">
   <div class="posts">
     {% for post in site.posts %}
-      <article class="blog-list-item" data-location="{{ post.url }}">
+      <article class="blog-list-item blog-list-item-linked" data-location="{{ post.url }}">
         <div>
           <a class="title-link" href="{{ post.url }}" class="blog-link">
             <h2>{{ post.title }}</h2>

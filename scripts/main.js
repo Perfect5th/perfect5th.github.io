@@ -107,8 +107,11 @@ document.addEventListener("DOMContentLoaded", function () {
     case '/projects':
       active = 'nav-projects';
       break;
-    default:
+    case '/':
       active = 'nav-home';
+      break;
+    default:
+      active = 'nav-blog';
   }
 
   var activeNav = document.getElementById(active);
@@ -130,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
     techIcon.addEventListener('click', toggleTechInfo);
   }
 
-  var blogItems = document.getElementsByClassName('blog-list-item');
+  var blogItems = document.getElementsByClassName('blog-list-item-linked');
 
   for (var i = 0; i < blogItems.length; i++) {
     var blogItem = blogItems.item(i);

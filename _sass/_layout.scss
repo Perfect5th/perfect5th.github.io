@@ -130,11 +130,14 @@ header {
     flex-wrap: wrap;
 
     .introduction-image {
-        margin-top: 2rem;
+        margin: 3rem auto 1rem auto;
+        max-width: 500px;
+        text-align: center;
         width: 100%;
 
         svg {
             height: 100%;
+            max-width: 400px;
             width: 100%;
 
             .tea-steam {
@@ -148,6 +151,12 @@ header {
 .fields-infos {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+
+    .field-info {
+        padding-bottom: 2rem;
+    }
 
     .field-image {
         cursor: pointer;
@@ -157,6 +166,7 @@ header {
         svg {
             height: auto;
             width: 100%;
+            max-width: 300px;
 
             .field-arrow {
                 transform-origin: 640px 970px;
@@ -169,6 +179,7 @@ header {
         opacity: 0;
         overflow: hidden;
         padding: 0 1.5rem;
+        text-align: left;
         transition: height 0.75s ease-out;
     }
 }
@@ -376,6 +387,30 @@ footer {
             text-decoration: none;
         }
     }
+
+    .introduction {
+
+        .introduction-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 3rem auto 1rem auto;
+            width: 20rem;
+        }
+
+        .introduction-text {
+            width: 60%;
+        }
+    }
+
+    .fields-infos {
+
+        .field-info {
+            width: 30%;
+            margin-right: 1.5%;
+        }
+    }
+
 }
 
 @media (min-width: 1584px) {

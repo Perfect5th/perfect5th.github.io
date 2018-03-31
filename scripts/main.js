@@ -1,24 +1,35 @@
-activeTechInfos = ['tech-initial'];
+var activeTechInfos = ['tech-initial'];
+var navOpen = false;
 
-function showNav(event) {
-  var navItems = document.getElementById('nav-items');
+
+function showNav() {
+  var nav = document.getElementById('mobile-nav');
   var hamburger = document.getElementById('hamburger');
 
-  hamburger.style.display = 'none';
-  navItems.classList.add('nav-items-shown');
-  navItems.style.left = '0px';
+  nav.classList.add('mobile-nav-shown');
+  nav.style.right = '0px';
+  hamburger.classList.add('open-hamburger');
+
+  navOpen = true;
 }
 
-function closeNav(event) {
-  var navItems = document.getElementById('nav-items');
+function hideNav() {
+  var nav = document.getElementById('mobile-nav');
   var hamburger = document.getElementById('hamburger');
 
-  navItems.classList.remove('nav-items-shown');
-  navItems.style.left = '110px';
+  nav.classList.remove('mobile-nav-shown');
+  nav.style.right = '-160px';
+  hamburger.classList.remove('open-hamburger');
 
-  setTimeout(function () {
-    hamburger.style.display = 'block';
-  }, 500);
+  navOpen = false;
+}
+
+function toggleNav(event) {
+  if (navOpen) {
+    hideNav();
+  } else {
+    showNav();
+  }
 }
 
 function flipVertically(element, start, end, ms) {

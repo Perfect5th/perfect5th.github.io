@@ -251,43 +251,114 @@ footer {
 }
 
 /* Mobile Nav Selectors */
-.mobile-nav {
-    color: $darkolivegreen;
-    font-family: 'Bitter', serif;
-    height: 0;
+.hamburger {
+    padding: 0.4rem 1rem 0 1rem;
+    text-align: right;
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 
-    .hamburger {
-        font-size: 1.6rem;
-        padding: 0.4rem 1rem 0 1rem;
-        text-align: right;
-
-        span {
-            cursor: pointer;
-        }
+    #ham-top-bar {
+        transform-origin: 23.8px 1015px;
     }
+
+    #ham-bot-bar {
+        transform-origin: 23.8px 1040px;
+    }
+
+    #ham-mid-bar {
+        transform-origin: 23.8px 1028px;
+    }
+
+    div {
+        cursor: pointer;
+    }
+}
+
+@keyframes topBarToX {
+    0% {
+        transform: translateY(0px) rotateZ(0deg);
+    }
+
+    80% {
+        transform: translateY(12px) rotateZ(0deg);
+    }
+
+    100% {
+        transform: translateY(12px) rotateZ(46deg);
+    }
+}
+
+@keyframes botBarToX {
+    0% {
+        transform: translateY(0px) rotateZ(0deg);
+    }
+
+    80% {
+        transform: translateY(-12px) rotateZ(0deg);
+    }
+
+    100% {
+        transform: translateY(-12px) rotateZ(-46deg);
+    }
+}
+
+@keyframes midBarToX {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    80% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(46deg);
+    }
+}
+
+.open-hamburger {
+    #ham-top-bar {
+        animation: topBarToX 0.3s linear forwards;
+    }
+
+    #ham-bot-bar {
+        animation: botBarToX 0.3s linear forwards;
+    }
+
+    #ham-mid-bar {
+        animation: midBarToX 0.3s linear forwards;
+    }
+}
+
+.mobile-nav {
+    background-color: $linen;
+    border-left: 1px solid $darkolivegreen;
+    color: $darkolivegreen;
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    width: 10rem;
+    position: fixed;
+    right: -160px;
+    top: 0;
+    transition: right 0.5s ease-out;
+    z-index: 100;
 
     .nav-items {
         font-size: 1.2rem;
         list-style: none;
-        left: 110px;
         margin-top: 0;
         padding: 0;
-        position: relative;
-        transition: left 0.5s ease-out;
 
         a {
+            color: inherit;
             text-decoration: none;
             font-weight: 400;
         }
 
         li {
             background-color: $linen;
-            border-bottom: 1px solid $darkolivegreen;
-            border-left: 1px solid $darkolivegreen;
             padding: 1rem;
             transition: background-color 0.5s;
             width: 100%;
@@ -300,17 +371,13 @@ footer {
         .first-nav {
             background-color: $firebrick;
             border-bottom: none;
-            cursor: pointer;
-            font-size: 1.4rem;
-            font-weight: 900;
+            height: 65px;
             padding-bottom: 0.4rem;
             padding-top: 0;
-            text-align: right;
-
         }
 
         .first-nav:hover {
-            background-color: $darkorange;
+            background-color: $firebrick;
         }
 
         .first-nav-desktop {
@@ -413,7 +480,8 @@ footer {
         }
     }
 
-    .mobile-nav {
+    .mobile-nav,
+    .hamburger {
         display: none;
     }
 

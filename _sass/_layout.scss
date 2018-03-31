@@ -383,7 +383,12 @@ footer {
         .first-nav-desktop {
             display: none;
         }
+
+        .nav-item-active {
+            background-color: darken($linen, 10%);
+        }
     }
+
 }
 
 .desktop-nav {

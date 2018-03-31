@@ -9,9 +9,9 @@
 
     <nav class="desktop-nav">
       <div class="nav-item-wrap">
-        <a href="/"><div id="nav-home" class="nav-item"><p>Home</p></div></a>
-        <a href="/posts"><div id="nav-blog" class="nav-item"><p>Blog</p></div></a>
-        <a href="/projects"><div id="nav-projects" class="nav-item"><p>Projects</p></div></a>
+        <a href="/"><div class="nav-item nav-home"><p>Home</p></div></a>
+        <a href="/posts"><div class="nav-item nav-blog"><p>Blog</p></div></a>
+        <a href="/projects"><div class="nav-item nav-projects"><p>Projects</p></div></a>
       </div>
     </nav>
   </div>
@@ -20,9 +20,10 @@
     <ul class="nav-items" id="nav-items">
       <li class="first-nav" id="close-nav" onclick=closeNav()></li>
       <li class="first-nav first-nav-desktop"></li>
-      <a href="/"><li class="active">Home</li></a>
-      <a href="/posts"><li>Blog</li></a>
-      <a href="/projects"><li class="last-nav">Projects</li></a>
+      <a href="/"><li class="nav-home">Home</li></a>
+      <a href="/posts"><li class="nav-blog">Blog</li></a>
+      <a href="/projects"><li class="nav-projects">Projects</li></a>
+      <a href="https://github.com/perfect5th/"><li class="last-nav">Github {% octicon mark-github %}</li></a>
     </ul>
   </nav>
 

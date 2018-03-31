@@ -125,8 +125,11 @@ document.addEventListener("DOMContentLoaded", function () {
       active = 'nav-blog';
   }
 
-  var activeNav = document.getElementById(active);
-  activeNav.classList.add('nav-item-active');
+  var activeNavs = document.getElementsByClassName(active);
+  for (var i = 0; i < activeNavs.length; i++) {
+    var activeNav = activeNavs.item(i);
+    activeNav.classList.add('nav-item-active');
+  }
 
   var skillItems = document.getElementsByClassName('field-image');
 

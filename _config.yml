@@ -30,8 +30,6 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-octicons
-gems:
-  - jekyll-octicons
 exclude:
   - vendor
   - Gemfile

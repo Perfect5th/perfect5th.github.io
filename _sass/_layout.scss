@@ -69,6 +69,7 @@ header {
     background-color: $linen;
     color: $darkolivegreen;
     padding-top: 0;
+    min-width: 0;
 
     h2 {
         border-bottom: 2px solid $sandybrown;
@@ -112,7 +113,9 @@ header {
     }
 
     pre.highlight {
-        white-space: pre-wrap;
+        overflow-x: scroll;
+        line-height: 1.4;
+        padding: 0.5em;
     }
 }
 

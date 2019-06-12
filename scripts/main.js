@@ -1,7 +1,7 @@
 const activeTechInfos = ['tech-initial'];
 const TERMINAL_TEXT_OPTS = [
 	'echo hello world',
-	'sudo rm -rf',
+	'sudo rm -rf /',
 	'npm run burnthemall',
 	'rm -rf node_modules',
 	'pipenv shell --python 3',

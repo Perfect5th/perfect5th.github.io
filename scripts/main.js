@@ -138,6 +138,8 @@ function typeTerminalText(element, text) {
 			element.textContent = element.textContent + text[i++];
 		} else {
 			clearInterval(interval);
+			setTimeout(
+				() => changeTerminalText(element), TERMINAL_TEXT_REPLACE_INTERVAL);
 		}
 	}, TERMINAL_TEXT_TIMING);
 }
@@ -196,7 +198,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const terminalText = document.querySelector('#terminal-text');
 
-	terminalText.textContent = selectTerminalText();
-	setInterval(
-		() => changeTerminalText(terminalText), TERMINAL_TEXT_REPLACE_INTERVAL);
+	typeTerminalText(terminalText, selectTerminalText());
 });

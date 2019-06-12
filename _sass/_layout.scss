@@ -132,17 +132,25 @@ header {
 }
 
 @keyframes blinkCursor {
-  0% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 1;
+    }
 
-  50% {
-    opacity: 0;
-  }
+    49% {
+        opacity: 1;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    50% {
+        opacity: 0;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .introduction {
@@ -168,6 +176,7 @@ header {
         }
 
         .introduction-image-svg {
+            max-width: 100%;
             position: relative;
             width: 25rem;
 
@@ -175,15 +184,15 @@ header {
                 color: #839496;
                 font-family: 'Fira Mono', monospace;
                 font-size: 0.6em;
-                left: 3.3rem;
+                left: 14%;
                 position: absolute;
                 text-align: left;
-                top: 1.7rem;
-                width: 10rem;
+                top: 14%;
+                width: 50%;
 
                 .terminal-cursor {
-                  background-color: #fff;
-                  animation: blinkCursor 1.5s steps(2, jump-none) infinite running;
+                  background-color: #839496;
+                  animation: blinkCursor 1.5s linear infinite running;
                 }
             }
         }

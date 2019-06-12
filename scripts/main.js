@@ -13,6 +13,8 @@ const TERMINAL_TEXT_OPTS = [
 	'vim --clean ~/.vimrc',
 	'make clean && make'
 ];
+const TERMINAL_TEXT_TIMING = 100;  // ms
+const TERMINAL_TEXT_REPLACE_INTERVAL = 5000;  // ms
 
 let navOpen = false;
 
@@ -127,6 +129,23 @@ function selectTerminalText() {
 	return TERMINAL_TEXT_OPTS[randomInt];
 }
 
+function typeTerminalText(element, text) {
+	let i = 0;
+	element.textContent = '';
+
+	const interval = setInterval(() => {
+		if (i < text.length) {
+			element.textContent = element.textContent + text[i++];
+		} else {
+			clearInterval(interval);
+		}
+	}, TERMINAL_TEXT_TIMING);
+}
+
+function changeTerminalText(element) {
+	typeTerminalText(element, selectTerminalText());
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	const path = window.location.pathname;
 	let active = '';
@@ -178,4 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const terminalText = document.querySelector('#terminal-text');
 
 	terminalText.textContent = selectTerminalText();
+	setInterval(
+		() => changeTerminalText(terminalText), TERMINAL_TEXT_REPLACE_INTERVAL);
 });

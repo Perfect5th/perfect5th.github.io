@@ -131,6 +131,20 @@ header {
     }
 }
 
+@keyframes blinkCursor {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .introduction {
     display: flex;
     flex-direction: row-reverse;
@@ -152,6 +166,28 @@ header {
                 transform-origin: 525px 0px;
             }
         }
+
+        .introduction-image-svg {
+            position: relative;
+            width: 25rem;
+
+            .introduction-image-overlay-text {
+                color: #839496;
+                font-family: 'Fira Mono', monospace;
+                font-size: 0.6em;
+                left: 3.3rem;
+                position: absolute;
+                text-align: left;
+                top: 1.7rem;
+                width: 10rem;
+
+                .terminal-cursor {
+                  background-color: #fff;
+                  animation: blinkCursor 1.5s steps(2, jump-none) infinite running;
+                }
+            }
+        }
+
     }
 }
 

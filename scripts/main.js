@@ -1,157 +1,181 @@
-var activeTechInfos = ['tech-initial'];
-var navOpen = false;
+const activeTechInfos = ['tech-initial'];
+const TERMINAL_TEXT_OPTS = [
+	'echo hello world',
+	'sudo rm -rf',
+	'npm run burnthemall',
+	'rm -rf node_modules',
+	'pipenv shell --python 3',
+	'chmod +x manage.py',
+	'du -hs *',
+	'ngrok http 1234',
+	'sudo apt update && sudo apt upgrade',
+	'pacman -Syu',
+	'vim --clean ~/.vimrc',
+	'make clean && make'
+];
 
+let navOpen = false;
 
 function showNav() {
-  var nav = document.getElementById('mobile-nav');
-  var hamburger = document.getElementById('hamburger');
+	const nav = document.querySelector('#mobile-nav');
+	const hamburger = document.querySelector('#hamburger');
 
-  nav.classList.add('mobile-nav-shown');
-  nav.style.right = '0px';
-  hamburger.classList.add('open-hamburger');
+	nav.classList.add('mobile-nav-shown');
+	nav.style.right = '0px';
+	hamburger.classList.add('open-hamburger');
 
-  navOpen = true;
+	navOpen = true;
 }
 
 function hideNav() {
-  var nav = document.getElementById('mobile-nav');
-  var hamburger = document.getElementById('hamburger');
+	const nav = document.querySelector('#mobile-nav');
+	const hamburger = document.querySelector('#hamburger');
 
-  nav.classList.remove('mobile-nav-shown');
-  nav.style.right = '-160px';
-  hamburger.classList.remove('open-hamburger');
+	nav.classList.remove('mobile-nav-shown');
+	nav.style.right = '-160px';
+	hamburger.classList.remove('open-hamburger');
 
-  navOpen = false;
+	navOpen = false;
 }
 
 function toggleNav(event) {
-  if (navOpen) {
-    hideNav();
-  } else {
-    showNav();
-  }
+	if (navOpen) {
+		hideNav();
+	} else {
+		showNav();
+	}
 }
 
 function flipVertically(element, start, end, ms) {
-  var current = start;
-  var direction = start <= end ? 10 : -10;
+	let current = start;
+	const direction = start <= end ? 10 : -10;
 
-  var tick = setInterval(function () {
-    if (current === end) {
-      clearInterval(tick);
-    } else {
-      current += direction;
-      element.style.transform = 'rotateX(' + current + 'deg)';
-    }
-  }, ms / (Math.abs(start - end) / 10));
+	var tick = setInterval(() => {
+		if (current === end) {
+			clearInterval(tick);
+		} else {
+			current += direction;
+			element.style.transform = 'rotateX(' + current + 'deg)';
+		}
+	}, ms / (Math.abs(start - end) / 10));
 }
 
 function toggleSkillInfo() {
-  var skillItem = document.getElementById(this.dataset.target + '-text');
-  var opacity = skillItem.style.opacity;
-  var selectorArrow = document.getElementById(this.dataset.target + '-arrow');
+	const skillItem = document.getElementById(this.dataset.target + '-text');
+	const opacity = skillItem.style.opacity;
+	const selectorArrow = document.getElementById(this.dataset.target + '-arrow');
 
-  if (opacity === '1') {
-    skillItem.style.height = '0px';
-    window.setTimeout(function () {
-      skillItem.style.opacity = '0';
-    }, 600);
+	if (opacity === '1') {
+		skillItem.style.height = '0px';
+		window.setTimeout(() => {
+			skillItem.style.opacity = '0';
+		}, 600);
 
-    flipVertically(selectorArrow, 180, 0, 250);
+		flipVertically(selectorArrow, 180, 0, 250);
+	} else {
+		skillItem.style.height = skillItem.scrollHeight + 'px';
+		skillItem.style.opacity = '1';
 
-  } else {
-    skillItem.style.height = skillItem.scrollHeight + 'px';
-    skillItem.style.opacity = '1';
-
-    flipVertically(selectorArrow, 0, 180, 250);
-  }
+		flipVertically(selectorArrow, 0, 180, 250);
+	}
 }
 
 function hideTechInfo(techItem) {
-  techItem.style.height = '0px';
-  techItem.style.display = 'none';
+	techItem.style.height = '0px';
+	techItem.style.display = 'none';
 }
 
 function showTechInfo(techItem) {
-  techItem.style.display = 'block';
-  window.setTimeout(function () {
-    techItem.style.height = techItem.scrollHeight + 'px';
-  }, 25);
+	techItem.style.display = 'block';
+	window.setTimeout(() => {
+		techItem.style.height = techItem.scrollHeight + 'px';
+	}, 25);
 }
 
 function toggleTechInfo() {
-  var techItem = document.getElementById(this.dataset.target);
-  var display = techItem.style.display;
+	const techItem = document.getElementById(this.dataset.target);
+	const display = techItem.style.display;
 
-  if (display != 'block') {
-    for (var i = 0; i < activeTechInfos.length; i++) {
-      var otherTechInfo = activeTechInfos.pop();
-      otherTechInfo = document.getElementById(otherTechInfo);
+	if (display != 'block') {
+		for (let i = 0; i < activeTechInfos.length; i++) {
+			let otherTechInfo = activeTechInfos.pop();
+			otherTechInfo = document.getElementById(otherTechInfo);
 
-      hideTechInfo(otherTechInfo);
-    }
+			hideTechInfo(otherTechInfo);
+		}
 
-    showTechInfo(techItem);
-    activeTechInfos.push(this.dataset.target);
-  } else {
-    hideTechItem(techItem);
-    if (activeTechInfos.indexOf(this.dataset.target) > -1) {
-      var index = activeTechInfos.indexOf(this.dataset.target);
-      activeTechInfos.splice(index, 1);
-    }
-  }
+		showTechInfo(techItem);
+		activeTechInfos.push(this.dataset.target);
+	} else {
+		hideTechItem(techItem);
+		if (activeTechInfos.indexOf(this.dataset.target) > -1) {
+			const index = activeTechInfos.indexOf(this.dataset.target);
+			activeTechInfos.splice(index, 1);
+		}
+	}
 }
 
 function loadBlog(event) {
-  event.preventDefault();
-  window.location = this.dataset.location;
+	event.preventDefault();
+	window.location = this.dataset.location;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  var path = window.location.pathname;
-  var active = '';
+function selectTerminalText() {
+	const randomInt = Math.floor(
+		Math.random() * Math.floor(TERMINAL_TEXT_OPTS.length));
 
-  switch (path) {
-    case '/posts':
-      active = 'nav-blog';
-      break;
-    case '/projects':
-      active = 'nav-projects';
-      break;
-    case '/':
-      active = 'nav-home';
-      break;
-    default:
-      active = 'nav-blog';
-  }
+	return TERMINAL_TEXT_OPTS[randomInt];
+}
 
-  var activeNavs = document.getElementsByClassName(active);
-  for (var i = 0; i < activeNavs.length; i++) {
-    var activeNav = activeNavs.item(i);
-    activeNav.classList.add('nav-item-active');
-  }
+document.addEventListener('DOMContentLoaded', () => {
+	const path = window.location.pathname;
+	let active = '';
 
-  var skillItems = document.getElementsByClassName('field-image');
+	switch (path) {
+		case '/posts':
+			active = 'nav-blog';
+			break;
+		case '/projects':
+			active = 'nav-projects';
+			break;
+		case '/':
+			active = 'nav-home';
+			break;
+		default:
+			active = 'nav-blog';
+	}
 
-  for (var i = 0; i < skillItems.length; i++) {
-    var skillItem = skillItems.item(i);
+	const activeNavs = document.getElementsByClassName(active);
+	for (let i = 0; i < activeNavs.length; i++) {
+		const activeNav = activeNavs.item(i);
+		activeNav.classList.add('nav-item-active');
+	}
 
-    skillItem.addEventListener('click', toggleSkillInfo);
-  }
+	const skillItems = document.querySelectorAll('.field-image');
 
-  var techIcons = document.getElementsByClassName('tech-icon');
+	for (let i = 0; i < skillItems.length; i++) {
+		const skillItem = skillItems.item(i);
 
-  for (var i = 0; i < techIcons.length; i++) {
-    var techIcon = techIcons.item(i);
+		skillItem.addEventListener('click', toggleSkillInfo);
+	}
 
-    techIcon.addEventListener('click', toggleTechInfo);
-  }
+	const techIcons = document.querySelectorAll('.tech-icon');
 
-  var blogItems = document.getElementsByClassName('blog-list-item-linked');
+	for (let i = 0; i < techIcons.length; i++) {
+		const techIcon = techIcons.item(i);
 
-  for (var i = 0; i < blogItems.length; i++) {
-    var blogItem = blogItems.item(i);
+		techIcon.addEventListener('click', toggleTechInfo);
+	}
 
-    blogItem.addEventListener('click', loadBlog);
-  }
+	const blogItems = document.querySelectorAll('.blog-list-item-linked');
+
+	for (let i = 0; i < blogItems.length; i++) {
+		const blogItem = blogItems.item(i);
+
+		blogItem.addEventListener('click', loadBlog);
+	}
+
+	const terminalText = document.querySelector('#terminal-text');
+
+	terminalText.textContent = selectTerminalText();
 });

@@ -117,8 +117,8 @@ integers has a maximum possible memory address of 0xffffffffffffffff, which is
 1.8&times;10<sup>19</sup>, allowing for up to 16 EiB of memory. Which would 
 just be absolutely bonkers to actually produce, but extra room is good.
 
-Oh, and you definitely put a memory address in your Kraft Dinner. I recommend 
-spelling out the hex with alphagetti.
+Oh, and you can definitely put a memory address in your Kraft Dinner. I 
+recommend spelling out the hex with alphagetti.
 
 ### What *Is* a Number, Anyways?
 

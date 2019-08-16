@@ -121,7 +121,7 @@ Oh, and you can definitely put a memory address in your Kraft Dinner. I
 recommend spelling out the hex with alphagetti.
 
 ### What *Is* a Number, Anyways?
-
-Next time on the podcast, we're going back to kindergarten – what are numbers? 
-How does a computer remember them? Is anarchy really the *worst* thing that 
-can happen to our society. All this, and more!
+[Next time]({{ site.baseurl }}{% post_url 2019-08-16-computers-wtf-2-numbers %})
+on the podcast, we're going back to kindergarten – what are numbers? How does a 
+computer remember them? Is anarchy really the *worst* thing that can happen to 
+our society. All this, and more!

@@ -487,6 +487,19 @@ footer {
     }
 }
 
+.post-content {
+    padding-bottom: 1.6rem;
+
+    ul {
+        padding-left: 1.6rem;
+    }
+
+    li {
+        line-height: 1.6;
+        margin-bottom: 0.8rem;
+    }
+}
+
 .breadcrumbs {
     margin: auto;
     max-width: 1200px;

@@ -101,6 +101,6 @@ resulted in *terrible* IBS (Segmentation Fault).
 
 ### Oh, the Memories
 
-Next time, I'll dive a bit deeper into **Memory**, which is pretty 
+Next time, I'll dive a bit deeper into [**Memory**]({{ site.baseurl }}{% post_url 2019-08-15-computers-wtf-1-memory %}), which is pretty 
 straightforward as far as computing abstractions go. There is a bit of 
 Lovecraftian horror going on behind the scenes, but we can just ignore that...

@@ -88,11 +88,11 @@ values look like? Can I put one in my Kraft Dinner?
 
 ### Memory Addresses: Numbers That Let You Find Other, More Meaningful Numbers
 
-A memory address is simple an integer. To be more specific, it's a positive 
+A memory address is simply an integer. To be more specific, it's a positive 
 integer. If you modified the C code above to `printf("a = 0x%x\n", a)`, you'd 
 get output something like `a = 0x601030` (or some other value). It points to a 
 specific spot in the Computer System's main Memory. Memory itself can be 
-thought of, most simple, as just a big collection of bytes, in one long list. 
+thought of, most simply, as just a big collection of bytes, in one long list. 
 The memory address 0x1 (the integer 1) might refer to the first byte in that 
 list. The memory address 0xf (the unsigned integer 15) might refer to the 15th 
 byte in that list.
@@ -107,12 +107,12 @@ we have 0b1111111111111111 (in binary), or 0xffff (in hex), or 65535 (in
 decimal) possible memory addresses (zero doesn't count as valid, more on that 
 later). That may sound like a lot, but if each address represents a byte of 
 memory, that's only about 64 KiB of data. Good luck running your Fornite on 
-that, you darn kids and your vidyagames.
+that, you darn kids and your video games that I do not hold nostalgia for.
 
 Want to know why your accidentally installed 32-bit pirated version of Windows 
 7 can only support 4 GiB of RAM? It's because a 32-bit unsigned integer's max 
 value is 0xffffffff, which is about 4.3&times;10<sup>9</sup>, allowing for 
-only that many possible memory addresses (4 GiB). A system that can use 65-bit 
+only that many possible memory addresses (4 GiB). A system that can use 64-bit 
 integers has a maximum possible memory address of 0xffffffffffffffff, which is
 1.8&times;10<sup>19</sup>, allowing for up to 16 EiB of memory. Which would 
 just be absolutely bonkers to actually produce, but extra room is good.

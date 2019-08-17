@@ -27,7 +27,7 @@ If you just start slapping flatties all over the place with no strategic
 approach, there's no way you'll optimize this properly, and Satan will 
 probably mete out his harshest punishment on you – maintaining a legacy LAMP 
 stack. If, instead, you place the larger pieces so that one or two smaller 
-pieces can always fit around them, you begin to approach the concent of data 
+pieces can always fit around them, you begin to approach the concept of data 
 alignment.
 
 ### The Number of the Beast
@@ -37,7 +37,7 @@ list of memory addresses.
 
 If you have a good memory (pun, fuck, sorry!), then you'll remember that we 
 have a few different size options when storing values in memory. I'm going to 
-stick to the C names for these for reason that will never become apparent: 
+stick to the C names for these for reasons that will never become apparent: 
 `char` (1 byte), `short` (2 bytes), `int` (4 bytes), and `long` (8 bytes). In 
 a toddler-ish manner, it should be obvious that 2 `chars` fit in a `short`, 
 two `shorts` in an `int`, *etc*.
@@ -46,7 +46,10 @@ If we restrict ourselves, and our memory, to only placing `ints` at memory
 addresses that are *aligned* to 4 bytes (those that end in `0x0`, `0x4`, 
 `0x8`, and `0xc`), then we will always have room around them for other `ints`, 
 and therefore room for multiple `chars` and `shorts`, or no room. Sometimes, 
-we'll even have room for `longs`. This regularity also allows the System to 
+we'll even have room for `longs`. We extend this pattern to other sizes of 
+data by aligned them to addresses that are multiples of their sizes: `0x0`, 
+`0x2`, `0x4`, ... for `shorts`, `0x0`, `0x8`, ... for `longs` and just 
+whatever for those 1-byte `chars`. This regularity allows the System to 
 arrange memory in **blocks** of known size, which simplifies memory reads and 
 writes by using block numbers and offsets instead of always using absolute 
 memory addresses.
@@ -138,11 +141,11 @@ rather have it as an `int`. That is, we **cast** it to type `int`:
 
 This outputs `0xfffffff1`. The **expansion** from `char` to `int` pads the 
 left side of the representation with ones, same as an arithmetic shift. If 
-instead we had `char x = 0x01`, the output would be `0x00000001` (or just 0x1, 
-as `printf` by default does not include leading zeroes, but trust me it's the 
-longer version under the hood).
+instead we had `char x = 0x01`, the output would be `0x00000001` (or just 
+`0x1`, as `printf` by default does not include leading zeroes, but trust me 
+it's the longer version under the hood).
 
-#### P.S., Two's Complements
+#### P.S., My Two's Complements to the Chef
 *Many* Computing Systems use [two's complement](https://en.wikipedia.org/wiki/Two's_complement) 
 to represent negative numbers. Here's a *real* brief explanation of the 
 concept.

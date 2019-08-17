@@ -135,5 +135,6 @@ the byte at the given memory address – `0x01` – to get the one-byte
 representation.
 
 ### Chaotic-Neutral Address Alignment
-In our next campaign, we'll be tackling the dreaded byte-beast, the arbiter of 
-overlapping data, the devourer of memory, and the shifter of bits!
+In our [next campaign]({{ site.baseurl }}{% post_url 2019-08-17-computers-wtf-3-alignment %}), 
+we'll be tackling the dreaded byte-beast, the arbiter of overlapping data, the 
+devourer of memory, and the shifter of bits!

@@ -69,11 +69,11 @@ interpreters) usually save us from is the concept of a **CPU Architecture
 Instruction Set**. Basically, different CPUs have different sets of 
 instructions that are defined in their instruction set. For the purposes of 
 simplicity and maintenance of my sanity, all the assembly I'll be talking 
-about is for the [`x86-64` instruction set](https://en.wikipedia.org/wiki/X68-64), 
+about is for the [`x86` instruction set](https://en.wikipedia.org/wiki/X86), 
 and I'll probably only touch on a very small subset of that instruction set at 
-that. I've selected `x86-64` because it's common, and it's the architecture of 
-the CPU of the computer I'm writing most of these posts on, so I'll be able to 
-test any assembly I present.
+that. I've selected `x86` because it's common, and it's the (32-bit version of 
+the) architecture of the CPU of the computer I'm writing most of these posts 
+on, so I'll be able to test any assembly I present.
 
 ### License and Registration
 Before we actually get into assembly, let's cover CPU structure a little bit 
@@ -103,7 +103,7 @@ There are others, but these are the only ones we need concern ourselves with
 for now.
 
 ### Avengers, Assembly!
-Now that I've laid down the groundwork, we can actually introduce some x86-64 
+Now that I've laid down the groundwork, we can actually introduce some x86 
 assembly code and demonstrate how to write it and test it out! Just kidding, 
 we're doing that next time, not now! You probably already knew that by judging 
 how much writing there was left on the page, but I'm still going to pretend 

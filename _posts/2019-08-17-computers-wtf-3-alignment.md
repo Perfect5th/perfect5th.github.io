@@ -47,7 +47,7 @@ addresses that are *aligned* to 4 bytes (those that end in `0x0`, `0x4`,
 `0x8`, and `0xc`), then we will always have room around them for other `ints`, 
 and therefore room for multiple `chars` and `shorts`, or no room. Sometimes, 
 we'll even have room for `longs`. We extend this pattern to other sizes of 
-data by aligned them to addresses that are multiples of their sizes: `0x0`, 
+data by aligning them to addresses that are multiples of their sizes: `0x0`, 
 `0x2`, `0x4`, ... for `shorts`, `0x0`, `0x8`, ... for `longs` and just 
 whatever for those 1-byte `chars`. This regularity allows the System to 
 arrange memory in **blocks** of known size, which simplifies memory reads and 

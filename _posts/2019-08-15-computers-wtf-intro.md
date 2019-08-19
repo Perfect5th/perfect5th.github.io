@@ -32,7 +32,7 @@ architectures, compilers, interpreters, and even programming language standard
 libraries (and third-party libraries) allow me to do that, to great extent and 
 effect.
 
-Why do I care, then, if all of those lovely things allow me to effective 
+Why do I care, then, if all of those lovely things allow me to effectively 
 ignore the system itself?
 
 Idle curiosity!
@@ -97,7 +97,7 @@ You follow the directions as you remember them to make yourself a delicious
 snack (Memory -> CPU), which you then consume (I/O).
 
 At some point in the future, you visit the washroom, as your all-KD diet has 
-resulted in *terrible* IBS (Segmentation Fault).
+resulted in *terrible* IBS (Segmentation Fault: core dumped).
 
 ### Oh, the Memories
 

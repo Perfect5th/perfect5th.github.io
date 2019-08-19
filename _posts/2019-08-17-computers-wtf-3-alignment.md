@@ -166,6 +166,6 @@ steps:
 
 ### Let's Do the Time Warp Again
 Phew! That was a lot of stuff. I mean a *lot*, by my standards. But we made 
-it! Next time, I'll introduce what the hell a CPU does, at a very basic level 
-(I don't want to get bogged down in the details, CPUs are hella complicated!). 
-Thanks for joining!
+it! Next time, I'll introduce [what the hell a CPU does]({{ site.baseurl }}{% post_url 2019-08-18-computers-wtf-4-cpus %}), 
+at a very basic level (I don't want to get bogged down in the details, CPUs 
+are hella complicated!).  Thanks for joining!

@@ -179,4 +179,4 @@ Now that we've gotten some (very) basic assembly under our x86 wings, we can
 take a step back into data and talk a little bit about **Static Variables**. 
 What does it mean for a variable to be statically allocated? Where's Waldo? 
 We'll be jumping back and forth between Java/C code and assembly to answer 
-these questions.
+these questions [next time]({{ site.baseurl }}{% post_url 2019-08-20-computers-wtf-6-statics %}).

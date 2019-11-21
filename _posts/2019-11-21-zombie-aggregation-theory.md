@@ -10,7 +10,7 @@ I've been thinking about zombies, the kind that eat humans to make more zombies.
   2. _NZ_ joins a different, nearby group
   3. _NZ_ creates their own new group
 
-Now, if option 1 were the definite case, then, assuming a single zombie patient zero, there would only be one, enormous shambling horde. The horde made be split into subgroups at a later time due to an external force: say, the military shows up and cuts a swath through it with some sort of actually effective weaponry. Does a split horde rejoin, if it can? Do the sub-hordes go their own separate ways?
+Now, if option 1 were the definite case, then, assuming a single zombie patient zero, there would only be one, enormous shambling horde. The horde may be split into subgroups at a later time due to an external force: say, the military shows up and cuts a swath through it with some sort of actually effective weaponry. Does a split horde rejoin, if it can? Do the sub-hordes go their own separate ways?
 
 Another problem with option 1 is the assumption that _NZ_ knows where _PZ_ is. Maybe zombies have some sort of pheromone-based clumping factor that lets them find large groups of zombies, or find their _PZ_ like some salmon finding the stream it grew up in. Uncertain.
 

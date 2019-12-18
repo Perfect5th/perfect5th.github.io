@@ -16,7 +16,7 @@ Kevin walks around to stand beside you. He looks slightly confused, as if the de
 
 You intertwine your fingers and flex them, arms outstretch. Then, tapping the top left key three times for luck, begin:
 
-```
+```racket
 #lang racket
 ```
 
@@ -24,7 +24,7 @@ You feel Kevin balk. His aura shivers. A slight cold wind wriggles through the s
 
 _Say something to allay his concerns_. “It's quite expressive.” You optimistically assume he has been soothed. “Let's start at the bottom — build our way up slowly.”
 
-```
+```racket
 (define Object (λ (msg) (void)))
 ```
 
@@ -40,7 +40,7 @@ _Say something to allay his concerns_. “It's quite expressive.” You optimist
 
 You continue:
 
-```
+```racket
 (define (obj superobj fields)
   (λ (msg)
     (let ([field (assoc msg fields)])
@@ -51,7 +51,7 @@ You continue:
 
 “If what we search for is not present, we defer to our ancestors” you say, glancing upward. The LED ceiling lights blink conspiratorily, bringing you a smile. Kevin shakes a dusting of spring snow from his tufts.
 
-```
+```racket
 (define Leaf
   (obj
     Object
@@ -69,7 +69,7 @@ You smile. Finally, he is beginning to engage. “Well,” you keep your tone at
 
 “I was just, wondering…” Kevin trails off as you run your fingers ritualistically across the keyboard. The round face of the room's touchscreen thermostat begins to frown.
 
-```
+```racket
 (define Composite
   (obj
     Leaf
@@ -93,7 +93,7 @@ He removes his glasses with one hand to breathe the ice from them while gesturin
 
 “Ah yes, thank you Kevin.”
 
-```
+```racket
 (define file1 (obj Leaf (list (list 'name "file1"))))
 (define file2 (obj Leaf (list (list 'name "file2"))))
 (define file3 (obj Leaf (list (list 'name "file3"))))
@@ -113,7 +113,7 @@ He removes his glasses with one hand to breathe the ice from them while gesturin
 
 You perform a quick hand mantra to commit your incantation and direct Kevin's warbling attention to the console.
 
-```
+```bash
 dir2/
     dir1/
         file1
@@ -131,7 +131,7 @@ Kevin squints and swallows, you think you hear a slightly defensive hiss, but he
 
 You begin again, this time with even more vigour.
 
-```
+```racket
 (define-syntax-rule (-> obj msg args ...)
   ((obj (quote msg)) obj args ...))
 
@@ -151,7 +151,7 @@ Kevin may have given up, or he may have laid an egg. His expression is unreadabl
 
 You begin to rewrite some of your previous work:
 
-```
+```racket
 (class Leaf
   [(name "")
    (printName
@@ -177,7 +177,7 @@ You begin to rewrite some of your previous work:
 
 He hunkers down, warming his clutch. The threat is beginning to pass.
 
-```
+```racket
 (define file1 (new Leaf ([name "file1"])))
 (define file2 (new Leaf ([name "file2"])))
 (define file3 (new Leaf ([name "file3"])))

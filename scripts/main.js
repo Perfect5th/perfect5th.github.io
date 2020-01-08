@@ -15,19 +15,25 @@ const TERMINAL_TEXT_OPTS = [
 	'cabal init -n --is-executable'
 ];
 const HEADER_TEXT_OPTS = [
-  'Developer at Large',
-  'The Last Currybender',
-  'Narrated by Morgan Freeman',
-  'Web Design and Development',
+	'Developer at Large',
+	'The Last Currybender',
+	'Narrated by Morgan Freeman',
+	'Web Design and Development',
 	'Shoebills Terrify Me',
-  'Click for New Byline',
-  'Architectural Anarchist',
+	'Click for New Byline',
+	'Architectural Anarchist',
 	'Recursing Recusion Recursively',
 	'Continually Currying Curries',
-	'Will Violate Immutability for Food'
+	'Will Violate Immutability for Food',
+	'Always Signs Every Commit',
+	'Completely Partially Applicating',
+	'Scheming Scheming Scheming...',
+	'Lambda means “To Lambda”',
+	'Parentheses Are My Family'
 ];
 const TERMINAL_TEXT_TIMING = 100;  // ms
 const TERMINAL_TEXT_REPLACE_INTERVAL = 5000;  // ms
+const HEADER_TEXT_REPLACE_INTERVAL = 180000;  // ms - 3 minutes
 
 let navOpen = false;
 
@@ -174,6 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		changeHeaderText(header);
 
 		header.addEventListener('click', () => changeHeaderText(header));
+
+		setInterval(() => changeHeaderText(header), HEADER_TEXT_REPLACE_INTERVAL);
 	}
 
 	switch (path) {

@@ -11,7 +11,20 @@ const TERMINAL_TEXT_OPTS = [
 	'sudo apt update && sudo apt upgrade',
 	'pacman -Syu',
 	'vim --clean ~/.vimrc',
-	'make clean && make'
+	'make clean && make',
+	'cabal init -n --is-executable'
+];
+const HEADER_TEXT_OPTS = [
+  'Developer at Large',
+  'The Last Currybender',
+  'Narrated by Morgan Freeman',
+  'Web Design and Development',
+	'Shoebills Terrify Me',
+  'Click for New Byline',
+  'Architectural Anarchist',
+	'Recursing Recusion Recursively',
+	'Continually Currying Curries',
+	'Will Violate Immutability for Food'
 ];
 const TERMINAL_TEXT_TIMING = 100;  // ms
 const TERMINAL_TEXT_REPLACE_INTERVAL = 5000;  // ms
@@ -122,11 +135,11 @@ function loadBlog(event) {
 	window.location = this.dataset.location;
 }
 
-function selectTerminalText() {
+function selectTextFromArray(arr) {
 	const randomInt = Math.floor(
-		Math.random() * Math.floor(TERMINAL_TEXT_OPTS.length));
+		Math.random() * Math.floor(arr.length));
 
-	return TERMINAL_TEXT_OPTS[randomInt];
+	return arr[randomInt];
 }
 
 function typeTerminalText(element, text) {
@@ -145,12 +158,23 @@ function typeTerminalText(element, text) {
 }
 
 function changeTerminalText(element) {
-	typeTerminalText(element, selectTerminalText());
+	typeTerminalText(element, selectTextFromArray(TERMINAL_TEXT_OPTS));
+}
+
+function changeHeaderText(element) {
+	element.textContent = selectTextFromArray(HEADER_TEXT_OPTS);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
 	const path = window.location.pathname;
 	let active = '';
+
+	header = document.querySelector('.header-right');
+	if (header) {
+		changeHeaderText(header);
+
+		header.addEventListener('click', () => changeHeaderText(header));
+	}
 
 	switch (path) {
 		case '/posts':
@@ -198,5 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const terminalText = document.querySelector('#terminal-text');
 
-	typeTerminalText(terminalText, selectTerminalText());
+	if (terminalText) {
+		typeTerminalText(terminalText, selectTextFromArray(TERMINAL_TEXT_OPTS));
+	}
 });

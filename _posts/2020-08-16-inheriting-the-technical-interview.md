@@ -2,17 +2,21 @@
 layout: post
 title: Inheriting the Technical Interview
 ---
-_N.b., This is an homage to Aphyr's series of "Technical Interview" posts, which are excellent and can be read [here](https://aphyr.com/posts/340-reversing-the-technical-interview), [here](https://aphyr.com/posts/341-hexing-the-technical-interview), and [here](https://aphyr.com/posts/342-typing-the-technical-interview). I do not pretend to have even a fraction of the original author's wit and depth of understanding._
+N.b., This is an homage to Aphyr's series of "Technical Interview" posts, which are excellent and can be read [here](https://aphyr.com/posts/340-reversing-the-technical-interview), [here](https://aphyr.com/posts/341-hexing-the-technical-interview), and [here](https://aphyr.com/posts/342-typing-the-technical-interview). I do not pretend to have even a fraction of the original author's wit and depth of understanding.
+
+### The Composite
 
 He begins to draw. His style is rough, untrained, but you can see that a fragment of his soul is that of an _artiste_, buried years ago to appease his new gods and shun the Old Ones. What results is a crude, incomplete pictogram of _Yggdrasil_, its branches straining to contain the unworthy weight of the world, its roots, once strong, reduced to fevered memories. It has been turned on its head.
 
-“So, er,” he stumbles. You know his next words before they come to him, and you mentally fill in the gaps: Kevin wishes you to recant (TODO)
+“So, er,” he stumbles. You know his next words before they come to him, and you mentally fill in the gaps: Kevin wishes you to _compose_, but not in the way evocative of a river flowing, each fall, eddy, and whirl transforming the water into something newer, but just as pure. No, Kevin has asked you to perform a _composition_ for him – in the method oft used to attempt to blunt the sharp edges and footguns of the world by placing a façade in front of them. A method akin to that of a trapdoor spider, camouflaging itself with the illusion of solid ground until its prey trapses within the distance of a fang. You resign yourself to the compromises you must make to exists in this plane.
 
-Kevin walks around to stand beside you. He looks slightly confused, as if the desk hadn't _always_ been a standing desk.
+“Ah, I'd like you to demonstrate how you would print a directory structure recursively” he asks, gesturing to his whiteboard petroglyph. The tilt of his head and stilted steps immediately put to your mind the noble egret.
+
+Kevin then walks around to stand beside you. He looks slightly confused, as if the desk hadn't _always_ been a standing desk.
 
 “Language?” you ask, customarily, eyebrows raised.
 
-“Whatever you're comfortable with.” The words leave Kevin's mouth before he has fully weighed them. The implications of this incantation suddenly fill his eyes with fear.
+“Whatever you're comfortable with.” The words leave Kevin's mouth before he has fully weighed them. The possible end-result of the speculative execution of this incantation flicker through his eyes for but a cycle.
 
 You intertwine your fingers and flex them, arms outstretch. Then, tapping the top left key three times for luck, begin:
 
@@ -32,7 +36,7 @@ _Say something to allay his concerns_. “It's quite expressive.” You optimist
 
 “The old names are the most succint” you reply, as way of explanation. He seems to accept that.
 
-“And, you've called it ‘Object’, even though it's a function?”
+“And, you've called it ‘Object’, even though it's a… it's a function?”
 
 “What is an object? A miserable pile of secrets.”
 
@@ -49,7 +53,7 @@ You continue:
           (superobj msg)))))
 ```
 
-“If what we search for is not present, we defer to our ancestors” you say, glancing upward. The LED ceiling lights blink conspiratorily, bringing you a smile. Kevin shakes a dusting of spring snow from his tufts.
+“If what we search for is not present, we defer to our ancestors” you say, glancing upward. The LED ceiling lights blink conspiratorily, offering comfort. Kevin shakes a dusting of spring snow from his tufts, uncomforted.
 
 ```racket
 (define Leaf
@@ -123,9 +127,9 @@ dir2/
 >
 ```
 
-Kevin speaks as if the words are a molasses, struggling for regurgitation. “That's the right output, but, uh, all I see are a bunch of functional calls, a crazy amount of lists, and some weird strings with only one quote mark. It's a bit incomprehensible.”
+Kevin speaks as if the words are a molasses, struggling for regurgitation. “That's the right output, but, uh, all I see are a bunch of function calls, a crazy amount of lists, and some weird strings with only one quote mark. It's a bit incomprehensible.”
 
-“My apologies,” you bow deeply. The desk shivers. “Symbols are only as powerful as their interpreters,” you say. “Perhaps I can attempt a translation into a tongue that will be more familiar to you, and you can take a gander?” You smile inwardly.
+“My apologies,” you bow deeply. The desk shivers. “Symbols are only as powerful as their readers” you say. “Perhaps I can attempt a translation into a tongue that will be more familiar to you, and you can take a gander?” You smile inwardly.
 
 Kevin squints and swallows, you think you hear a slightly defensive hiss, but he assents with a nod. “Yeah… we still have some time.”
 

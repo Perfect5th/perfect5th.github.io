@@ -2,7 +2,7 @@
 layout: post
 title: Computers, WTF? Part 3 - Chaotic-Neutral Alignment
 ---
-In our last [very special episode]({{ site.baseurl }}{% post_url 2019-08-16-computers-wtf-2-numbers %}), 
+In our last [very special episode]({% post_url 2019-08-16-computers-wtf-2-numbers %}), 
 I did an awful lot of typing about number representation in main memory (or in 
 general, I guess – number representation extends beyond just computers). And 
 all of that is fantasic: we picked up some jargon that we can use to impress 
@@ -166,6 +166,6 @@ steps:
 
 ### Let's Do the Time Warp Again
 Phew! That was a lot of stuff. I mean a *lot*, by my standards. But we made 
-it! Next time, I'll introduce [what the hell a CPU does]({{ site.baseurl }}{% post_url 2019-08-18-computers-wtf-4-cpus %}), 
+it! Next time, I'll introduce [what the hell a CPU does]({% post_url 2019-08-18-computers-wtf-4-cpus %}), 
 at a very basic level (I don't want to get bogged down in the details, CPUs 
 are hella complicated!).  Thanks for joining!

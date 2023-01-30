@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.7.1"
+ruby "2.7.7"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -16,10 +16,10 @@ gem "minima", "~> 2.5"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", "~> 207", group: :jekyll_plugins
+gem "github-pages", "~> 227", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.13"
-  gem "jekyll-octicons", "~> 10.0"
+  gem "jekyll-feed", "~> 0.15"
+  gem "jekyll-octicons", "~> 17.10"
 end

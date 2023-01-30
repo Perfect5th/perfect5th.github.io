@@ -2,7 +2,7 @@
 layout: post
 title: Computers, WTF? Part 5 - Avengers, Assembly!
 ---
-The [previous post]({{ site.baseurl }}{% post_url 2019-08-18-computers-wtf-4-cpus %}) 
+The [previous post]({% post_url 2019-08-18-computers-wtf-4-cpus %}) 
 was very conceptual. To balance things out, this one is going to be very 
 practical, but only if you think learning to write (very) basic assembly is 
 practical! Personally, I think it's important for understanding what your 
@@ -179,4 +179,4 @@ Now that we've gotten some (very) basic assembly under our x86 wings, we can
 take a step back into data and talk a little bit about **Static Variables**. 
 What does it mean for a variable to be statically allocated? Where's Waldo? 
 We'll be jumping back and forth between Java/C code and assembly to answer 
-these questions [next time]({{ site.baseurl }}{% post_url 2019-08-20-computers-wtf-6-statics %}).
+these questions [next time]({% post_url 2019-08-20-computers-wtf-6-statics %}).

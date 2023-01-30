@@ -2,7 +2,7 @@
 layout: post
 title: Computers, WTF? Part 4 - I, CPU
 ---
-In the [last issue]({{ site.baseurl }}{% post_url 2019-08-17-computers-wtf-3-alignment %}) 
+In the [last issue]({% post_url 2019-08-17-computers-wtf-3-alignment %}) 
 of this series, we uncovered the top layer of mysteries regarding memory 
 alignment and arithmetic and logical bit shifting. It was a bit lengthy, but 
 sometimes covering these topics takes time! Today, we'll talk about the phases 
@@ -108,4 +108,4 @@ assembly code and demonstrate how to write it and test it out! Just kidding,
 we're doing that next time, not now! You probably already knew that by judging 
 how much writing there was left on the page, but I'm still going to pretend 
 I've tricked you. I aim for a max 1000-ish words for each of these posts, so 
-as not to overwhelm (myself or you). See you [next time!]({{ site.baseurl }}{% post_url 2019-08-19-computers-wtf-5-basic-asm %})
+as not to overwhelm (myself or you). See you [next time!]({% post_url 2019-08-19-computers-wtf-5-basic-asm %})

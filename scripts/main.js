@@ -15,7 +15,7 @@ const TERMINAL_TEXT_OPTS = [
 	'cabal init -n --is-executable'
 ];
 const HEADER_TEXT_OPTS = [
-	'Developer at Large',
+	'Small Web Developer at Large',
 	'The Last Currybender',
 	'Narrated by Morgan Freeman',
 	'Web Design and Development',

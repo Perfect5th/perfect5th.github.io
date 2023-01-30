@@ -20,7 +20,7 @@ into an executable.
 
 ### Freeze, Sucka
 Here's some C. I know you were begging for some code after looking at 
-assembly [last time]({{ site.baseurl }}{% post_url 2019-08-19-computers-wtf-5-basic-asm %}).
+assembly [last time]({% post_url 2019-08-19-computers-wtf-5-basic-asm %}).
 
 ```
 int a;
